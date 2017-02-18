@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_find_svc"
+            android:icon="@drawable/android128"
+            android:title="Find Services"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <item
+            android:id="@+id/nav_emrgency_urgent"
+            android:icon="@drawable/android128"
+            android:title="Emergency/Urgent Care"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <item
+            android:id="@+id/nav_free_resources"
+            android:icon="@drawable/android128"
+            android:title="Free Resources"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <item
+            android:id="@+id/nav_favorite"
+            android:icon="@drawable/android128"
+            android:title="Favorites"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <item
+            android:id="@+id/nav_estimated_cost"
+            android:icon="@drawable/android128"
+            android:title="Estimated Cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </group>
+</menu>
