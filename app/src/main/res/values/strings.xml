@@ -1,3 +1,36 @@
 <resources>
-    <string name="app_name">C4Q Hackathon App</string>
+    <string name="app_name">AccessHealth</string>
+    <string name="find_service">Find a Service</string>
+    <string name="emergency_urgent">Emergency Room/Urgent Care</string>
+    <string name="free_resources">Free Resources</string>
+    <string name="go_favs">Go to Favorites</string>
+    <string name="estimate_cost">Estimate Cost</string>
+    <string name="emergency_room">Emergency Rooms</string>
+    <string name="urgent_care">Urgent Care</string>
+    <string name="my_favs">My Favorites</string>
+    <string name="service_question">What kind of service are you looking for?</string>
+    <string name="category">Category</string>
+    <string name="borough">Borough</string>
+    <string name="bronx">The Bronx</string>
+    <string name="bklyn">Brooklyn</string>
+    <string name="manhattan">Manhattan</string>
+    <string name="queens">Queens</string>
+    <string name="staten">Staten Island</string>
+    <string name="pap">Pap Smear</string>
+    <string name="birth_control">Birth Control</string>
+    <string name="pediatrician">Pediatrician</string>
+    <string name="std">STD Testing</string>
+    <string name="planned_parenthood">Planned Parenthood</string>
+    <string name="search">Search</string>
+    <string name="profile">My Profile</string>
+    <string name="medicaid_medicare">Medicaid/Medicare Availability</string>
+    <string name="near_me">Near Me</string>
+    <string name="name">Name:</string>
+    <string name="address">Address:</string>
+    <string name="phone">Phone:</string>
+    <string name="recent_search">Recently Searched:</string>
+    <string name="who_eligible">Who May Be Eligible?</string>
+    <string name="family_size">Family Size</string>
+    <string name="income">Income Range</string>
+    <string name="your_fee">Your HHC Options Reduced Fee Level is:</string>
 </resources>
