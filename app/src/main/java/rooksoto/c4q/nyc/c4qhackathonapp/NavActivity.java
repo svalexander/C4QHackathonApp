@@ -3,6 +3,7 @@ package rooksoto.c4q.nyc.c4qhackathonapp;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.Fragment;
 import android.view.MenuItem;
 
 /**
@@ -15,6 +16,21 @@ public class NavActivity extends BaseActivity implements NavigationView.OnNaviga
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nav);
 
+        try {
+            loadFragment();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    private void loadFragment() throws ClassNotFoundException, IllegalAccessException, InstantiationException {
+        String fragmentName = getIntent().getExtras().getString("passed_fragment");
+        Fragment fragment = (Fragment)(Class.forName(fragmentName).newInstance());
     }
 
     @Override

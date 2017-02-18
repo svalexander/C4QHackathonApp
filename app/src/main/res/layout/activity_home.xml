@@ -39,6 +39,8 @@
                 <TextView
                     android:id="@+id/tv_find_svc"
                     android:layout_margin="@dimen/buttons_home_margin"
+                    android:padding="@dimen/buttons_home_padding"
+                    android:textSize="@dimen/buttons_home_text_size"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -50,6 +52,8 @@
                 <TextView
                     android:id="@+id/tv_emergency_urgent"
                     android:layout_margin="@dimen/buttons_home_margin"
+                    android:padding="@dimen/buttons_home_padding"
+                    android:textSize="@dimen/buttons_home_text_size"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -71,6 +75,8 @@
                 <TextView
                     android:id="@+id/tv_favorites"
                     android:layout_margin="@dimen/buttons_home_margin"
+                    android:padding="@dimen/buttons_home_padding"
+                    android:textSize="@dimen/buttons_home_text_size"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -82,6 +88,8 @@
                 <TextView
                     android:id="@+id/tv_estimate_cost"
                     android:layout_margin="@dimen/buttons_home_margin"
+                    android:padding="@dimen/buttons_home_padding"
+                    android:textSize="@dimen/buttons_home_text_size"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
