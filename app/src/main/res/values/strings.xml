@@ -1,7 +1,5 @@
 <resources>
-    <string name="app_name">C4Q Hackathon App</string>
-
-
+    
     <string name="nyu_clinic_address">16 East 16th Street, New York, NY 10003</string>
     <string name="weill_cornell_address">505 East 70th Street, 1st Floor, New York, NY 10021</string>
     <string name="mount_sinai_address">17 East 102nd Street, 7th Floor, New York, NY 10029</string>
@@ -12,9 +10,6 @@
     <string name="ryan_clinic_hk">645 10th Ave</string>
     <string name="callen_lorde_clinic_address">356 West 18th Street</string>
     <string name="charles_wang_clinic_address">125 Walker Street </string>
-
-
-
 
     <string name="app_name">AccessHealth</string>
     <string name="find_service">Find a Service</string>
