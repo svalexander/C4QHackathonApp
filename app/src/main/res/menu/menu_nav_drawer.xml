@@ -18,13 +18,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <item
-            android:id="@+id/nav_free_resources"
-            android:icon="@drawable/android128"
-            android:title="Free Resources"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <item
             android:id="@+id/nav_favorite"
             android:icon="@drawable/android128"
             android:title="Favorites"
