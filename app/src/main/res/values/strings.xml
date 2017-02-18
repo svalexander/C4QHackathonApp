@@ -89,4 +89,9 @@
     <string name="fam_five_level_seven">$104,681+</string>
     <string name="fam_six_level_seven">$119,961+</string>
     <string name="fam_seven_level_seven">$135,241+</string>
+    <string name="input_name">Input Name</string>
+    <string name="save">SAVE</string>
+    <string name="english">English</string>
+    <string name="spanish">Espanol</string>
+    <string name="pref_language">Preferred Language:</string>
 </resources>

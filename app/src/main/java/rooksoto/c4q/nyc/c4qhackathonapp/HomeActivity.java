@@ -28,7 +28,6 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener{
     private void initViews() {
         tvFindServices = (TextView) findViewById(R.id.tv_find_svc);
         tvEmergencyUrgent = (TextView) findViewById(R.id.tv_emergency_urgent);
-        tvFreeResources = (TextView) findViewById(R.id.tv_free_resources);
         tvFavorites = (TextView) findViewById(R.id.tv_favorites);
         tvEstimateCost = (TextView) findViewById(R.id.tv_estimate_cost);
     }
