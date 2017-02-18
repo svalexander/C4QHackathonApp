@@ -1,4 +1,4 @@
-package rooksoto.c4q.nyc.c4qhackathonapp;
+package rooksoto.c4q.nyc.c4qhackathonapp.fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -9,16 +9,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import rooksoto.c4q.nyc.c4qhackathonapp.R;
+
 /**
  * Created by akashaarcher on 2/18/17.
  */
 
-public class UrgentCareFragment extends Fragment {
+public class EmergencyRoomFragment extends Fragment {
 
     private String title;
     private int page;
-    private static final String INT_TAG = "one";
-    private static final String TITLE_TAG = "urgFrag";
+    private static final String INT_TAG = "zero";
+    private static final String TITLE_TAG = "emergFrag";
     private RecyclerView recyclerView;
 
 
@@ -34,15 +36,15 @@ public class UrgentCareFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        page = getArguments().getInt(INT_TAG, 1);
+        page = getArguments().getInt(INT_TAG, 0);
         title = getArguments().getString(TITLE_TAG);
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_urgent_care,container,false);
+        View view = inflater.inflate(R.layout.fragment_emergency_room,container,false);
 
-        recyclerView = (RecyclerView) view.findViewById(R.id.urgent_care_rv);
+        recyclerView = (RecyclerView) view.findViewById(R.id.emergency_rv);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
         return view;

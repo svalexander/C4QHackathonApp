@@ -6,6 +6,9 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 import java.util.ArrayList;
 
+import rooksoto.c4q.nyc.c4qhackathonapp.fragments.EmergencyRoomFragment;
+import rooksoto.c4q.nyc.c4qhackathonapp.fragments.UrgentCareFragment;
+
 /**
  * Created by akashaarcher on 2/18/17.
  */
