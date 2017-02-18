@@ -10,31 +10,28 @@ import android.widget.Toast;
 
 public class BaseActivity extends AppCompatActivity {
 
+    public static final String BASE_PACKAGE = "rooksoto.c4q.nyc.c4qhackathonapp.fragments.";
     void loadEstimateCost() {
         Intent intent = new Intent(this, NavActivity.class);
-        intent.putExtra("passed_fragment", "EstimateCostFragment");
-        Toast.makeText(this, "Clicked: Load Estimated Cost", Toast.LENGTH_SHORT).show();
+        intent.putExtra("passed_fragment", BASE_PACKAGE + "EstimateCostFragment");
         startActivity(intent);
     }
 
     void loadFavorites() {
         Intent intent = new Intent(this, NavActivity.class);
-        intent.putExtra("passed_fragment", "FavoritesFragment");
-        Toast.makeText(this, "Clicked: Load Favorites", Toast.LENGTH_SHORT).show();
+        intent.putExtra("passed_fragment", BASE_PACKAGE + "FavoritesFragment");
         startActivity(intent);
     }
 
     void loadEmergencyUrgent() {
         Intent intent = new Intent(this, NavActivity.class);
-        intent.putExtra("passed_fragment", "EmergencyRoomFragment");
-        Toast.makeText(this, "Clicked: Emergency/Urgent", Toast.LENGTH_SHORT).show();
+        intent.putExtra("passed_fragment", BASE_PACKAGE + "EmergencyRoomFragment");
         startActivity(intent);
     }
 
     void loadFindServices() {
         Intent intent = new Intent(this, NavActivity.class);
-        intent.putExtra("passed_fragment", "FindServicesFragment");
-        Toast.makeText(this, "Clicked: Find Services", Toast.LENGTH_SHORT).show();
+        intent.putExtra("passed_fragment", BASE_PACKAGE + "FindServicesFragment");
         startActivity(intent);
     }
 }
