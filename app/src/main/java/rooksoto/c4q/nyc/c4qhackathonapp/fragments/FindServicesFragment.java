@@ -48,5 +48,5 @@ public class FindServicesFragment extends Fragment implements View.OnClickListen
     public void onClick(View view) {
 
     }
-    
+
 }
