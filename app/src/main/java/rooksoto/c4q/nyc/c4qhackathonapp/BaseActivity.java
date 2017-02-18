@@ -19,21 +19,21 @@ public class BaseActivity extends AppCompatActivity {
 
     void loadFavorites() {
         Intent intent = new Intent(this, NavActivity.class);
-        intent.putExtra("passed_fragment", "EstimateCostFragment");
+        intent.putExtra("passed_fragment", "FavoritesFragment");
         Toast.makeText(this, "Clicked: Load Favorites", Toast.LENGTH_SHORT).show();
         startActivity(intent);
     }
 
     void loadEmergencyUrgent() {
         Intent intent = new Intent(this, NavActivity.class);
-        intent.putExtra("passed_fragment", "EstimateCostFragment");
+        intent.putExtra("passed_fragment", "EmergencyRoomFragment");
         Toast.makeText(this, "Clicked: Emergency/Urgent", Toast.LENGTH_SHORT).show();
         startActivity(intent);
     }
 
     void loadFindServices() {
         Intent intent = new Intent(this, NavActivity.class);
-        intent.putExtra("passed_fragment", "EstimateCostFragment");
+        intent.putExtra("passed_fragment", "FindServicesFragment");
         Toast.makeText(this, "Clicked: Find Services", Toast.LENGTH_SHORT).show();
         startActivity(intent);
     }

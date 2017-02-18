@@ -1,9 +1,7 @@
 package rooksoto.c4q.nyc.c4qhackathonapp;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.design.widget.NavigationView;
-import android.support.v4.app.Fragment;
 import android.view.MenuItem;
 
 /**
@@ -12,7 +10,7 @@ import android.view.MenuItem;
 
 public class NavActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener{
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nav);
 
@@ -30,7 +28,8 @@ public class NavActivity extends BaseActivity implements NavigationView.OnNaviga
 
     private void loadFragment() throws ClassNotFoundException, IllegalAccessException, InstantiationException {
         String fragmentName = getIntent().getExtras().getString("passed_fragment");
-        Fragment fragment = (Fragment)(Class.forName(fragmentName).newInstance());
+        android.app.Fragment fragment = (android.app.Fragment) Class.forName(fragmentName).newInstance();
+        getFragmentManager().beginTransaction().replace(R.id.fl_fragment_host, fragment).commit();
     }
 
     @Override
