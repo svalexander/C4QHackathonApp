@@ -114,8 +114,6 @@
         <item>Planned Parenthood</item>
     </string-array>
 
-    <string name="medical_spinner_prompt">Choose from List</string>
-
     <string-array name="borough_list">
         <item>Please choose a location</item>
         <item>Brooklyn</item>
@@ -124,8 +122,6 @@
         <item>Bronx</item>
         <item>Staten Island</item>
     </string-array>
-
-    <string name="borough_prompt">Pick a Borough</string>
 
     <string name="input_name">Input Name</string>
     <string name="save">SAVE</string>

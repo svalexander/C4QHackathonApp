@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import rooksoto.c4q.nyc.c4qhackathonapp.model.UrgentCareLocation;
+import rooksoto.c4q.nyc.c4qhackathonapp.model.FacilityLocation;
 
 /**
  * Created by akashaarcher on 2/18/17.
@@ -33,11 +33,11 @@ public class UrgentCareViewHolder extends RecyclerView.ViewHolder {
 
     private static View inflateView(ViewGroup parent) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        return inflater.inflate(R.layout.urgent_care_item, parent, false);
+        return inflater.inflate(R.layout.facility_location_item, parent, false);
     }
 
 
-    public void bind(UrgentCareLocation location) {
+    public void bind(FacilityLocation location) {
         tvFacilityName.setText(location.getName());
         tvBorough.setText(location.getBorough());
         tvAddress.setText(location.getAddress());
