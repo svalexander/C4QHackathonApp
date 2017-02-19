@@ -24,8 +24,7 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     void loadEmergencyUrgent() {
-        Intent intent = new Intent(this, NavActivity.class);
-        intent.putExtra("passed_fragment", BASE_PACKAGE + "EmergencyRoomFragment");
+        Intent intent = new Intent(this, TabActivity.class);
         startActivity(intent);
     }
 
