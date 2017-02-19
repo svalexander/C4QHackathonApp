@@ -22,7 +22,6 @@
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:entries="@array/medical_services"
-        android:spinnerMode="dropdown"
         android:prompt="@string/medical_spinner_prompt" />
 
 
@@ -32,7 +31,6 @@
         android:layout_height="50dp"
         android:layout_marginTop="60dp"
         android:entries="@array/borough_list"
-        android:spinnerMode="dropdown"
         android:prompt="@string/borough_prompt" />
 
 

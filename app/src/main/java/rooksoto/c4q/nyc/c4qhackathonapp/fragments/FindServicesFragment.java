@@ -1,7 +1,7 @@
 package rooksoto.c4q.nyc.c4qhackathonapp.fragments;
 
-import android.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -58,13 +58,11 @@ public class FindServicesFragment extends Fragment implements View.OnClickListen
         servicesSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                //   Spinner spinner = (Spinner) adapterView;
-//                switch (spinner.getId()) {
-//                    case R.id.services_spinner:
                 serviceSpinnerValue = servicesSpinner.getSelectedItem().toString();
-
+                if(serviceSpinnerValue.equals("Please choose a service")) {
+                    Toast.makeText(getActivity(), "Please choose a service", Toast.LENGTH_SHORT).show();
+                }
             }
-
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
@@ -76,8 +74,10 @@ public class FindServicesFragment extends Fragment implements View.OnClickListen
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 boroughSpinnerValue = boroughSpinner.getSelectedItem().toString();
+                if(boroughSpinnerValue.equals("Please choose a location")) {
+                    Toast.makeText(getActivity(), "Please choose a location", Toast.LENGTH_SHORT).show();
+                }
             }
-
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
@@ -89,7 +89,7 @@ public class FindServicesFragment extends Fragment implements View.OnClickListen
         return view;
     }
 
-
+    
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);

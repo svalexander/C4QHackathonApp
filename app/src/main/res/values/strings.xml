@@ -103,8 +103,8 @@
     <string name="fam_six_level_seven">$119,961+</string>
     <string name="fam_seven_level_seven">$135,241+</string>
 
-
     <string-array name="medical_services">
+        <item>Please choose a service</item>
         <item>Pap Smear</item>
         <item>Birth Control</item>
         <item>Emergency Room</item>
@@ -117,6 +117,7 @@
     <string name="medical_spinner_prompt">Choose from List</string>
 
     <string-array name="borough_list">
+        <item>Please choose a location</item>
         <item>Brooklyn</item>
         <item>Queens</item>
         <item>Manhattan</item>
@@ -126,4 +127,10 @@
 
     <string name="borough_prompt">Pick a Borough</string>
 
+    <string name="input_name">Input Name</string>
+    <string name="save">SAVE</string>
+    <string name="english">English</string>
+    <string name="spanish">Espanol</string>
+    <string name="pref_language">Preferred Language:</string>
+    <string name="estimated_cost">Estimated Cost</string>
 </resources>
