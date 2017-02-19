@@ -44,9 +44,6 @@ public class EmergencyRoomFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_emergency_room,container,false);
 
-        recyclerView = (RecyclerView) view.findViewById(R.id.emergency_rv);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-
         return view;
     }
 

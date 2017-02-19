@@ -29,7 +29,11 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.1.1'
     compile 'com.squareup.retrofit2:converter-gson:2.1.0'
     compile 'com.android.support:recyclerview-v7:25.1.1'
+<<<<<<< HEAD
+    compile 'com.google.android.gms:play-services-maps:10.0.1'
     testCompile 'junit:junit:4.12'
+=======
+>>>>>>> 85fd3967d96277329a369c07a97c1e893c51d2c8
     compile 'com.android.support:design:25.1.1'
     compile 'nl.qbusict:cupboard:2.1.4'
 }
