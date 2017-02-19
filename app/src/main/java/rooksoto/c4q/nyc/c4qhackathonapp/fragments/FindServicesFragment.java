@@ -9,6 +9,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import rooksoto.c4q.nyc.c4qhackathonapp.R;
 
@@ -16,37 +18,96 @@ import rooksoto.c4q.nyc.c4qhackathonapp.R;
  * Created by rook on 2/18/17.
  */
 
-public class FindServicesFragment extends Fragment implements View.OnClickListener{
+public class FindServicesFragment extends Fragment implements View.OnClickListener {
 
     private Spinner servicesSpinner;
     private Spinner boroughSpinner;
     private Button searchBtn;
 
+    private String serviceSpinnerValue = "";
+    private String boroughSpinnerValue = "";
+
+
+    TextView txTest;
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return super.onCreateView(inflater, container, savedInstanceState);
+
+        View view = inflater.inflate(R.layout.fragment_find_services, container, false);
+
+        servicesSpinner = (Spinner) view.findViewById(R.id.services_spinner);
+        boroughSpinner = (Spinner) view.findViewById(R.id.borough_spinner);
+        searchBtn = (Button) view.findViewById(R.id.search_btn);
+
+        txTest = (TextView) view.findViewById(R.id.spinner_output);
+
+
+        ArrayAdapter<CharSequence> serviceAdapter = ArrayAdapter.createFromResource(view.getContext(),
+                R.array.medical_services, android.R.layout.simple_spinner_item);
+        serviceAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        servicesSpinner.setAdapter(serviceAdapter);
+
+
+        ArrayAdapter<CharSequence> boroughAdapter = ArrayAdapter.createFromResource(view.getContext(),
+                R.array.borough_list, android.R.layout.simple_spinner_item);
+        boroughAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        boroughSpinner.setAdapter(boroughAdapter);
+
+
+        servicesSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                //   Spinner spinner = (Spinner) adapterView;
+//                switch (spinner.getId()) {
+//                    case R.id.services_spinner:
+                serviceSpinnerValue = servicesSpinner.getSelectedItem().toString();
+
+            }
+
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+                Toast.makeText(getActivity(), "Choose a Service", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        boroughSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                boroughSpinnerValue = boroughSpinner.getSelectedItem().toString();
+            }
+
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+                Toast.makeText(getActivity(), "Choose a Location", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        setListeners();
+        return view;
     }
 
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-       servicesSpinner = (Spinner) view.findViewById(R.id.services_spinner);
-        boroughSpinner = (Spinner) view.findViewById(R.id.borough_spinner);
-
-        servicesSpinner.setOnItemSelectedListener((AdapterView.OnItemSelectedListener) getActivity());
-        boroughSpinner.setOnItemSelectedListener((AdapterView.OnItemSelectedListener) getActivity());
-
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(view.getContext(),
-                R.array.medical_services, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        servicesSpinner.setAdapter(adapter);
     }
+
+
+    private void setListeners() {
+        searchBtn.setOnClickListener(this);
+    }
+
 
     @Override
     public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.search_btn:
+                txTest.setText(serviceSpinnerValue + boroughSpinnerValue);
 
+        }
     }
-
 }
+

@@ -10,7 +10,7 @@
         android:id="@+id/spinner_head"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="60dp"
         android:layout_marginTop="25dp"
         android:gravity="center_horizontal"
         android:text="Select a Service Below"
@@ -45,6 +45,16 @@
         android:gravity="center"
         android:text="SEARCH"
         android:textColor="@color/white" />
+
+
+    <TextView
+        android:id="@+id/spinner_output"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp"
+        android:gravity="center_horizontal"
+        android:text="set text here"
+        android:textSize="10dp" />
 
 
 </LinearLayout>
