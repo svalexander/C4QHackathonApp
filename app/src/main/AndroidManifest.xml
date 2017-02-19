@@ -21,6 +21,7 @@
         <activity android:name=".NavActivity"/>
         <activity android:name=".SplashActivity"/>
         <activity android:name=".TabActivity"/>
+        <activity android:name=".LocationActivity"/>
     </application>
 
 </manifest>
