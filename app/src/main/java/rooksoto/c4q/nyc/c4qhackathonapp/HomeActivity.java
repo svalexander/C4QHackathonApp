@@ -2,7 +2,10 @@ package rooksoto.c4q.nyc.c4qhackathonapp;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
 
 public class HomeActivity extends BaseActivity implements View.OnClickListener{
 
@@ -10,12 +13,14 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener{
     TextView tvEmergencyUrgent;
     TextView tvFavorites;
     TextView tvEstimateCost;
+    ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         initViews();
+        Picasso.with(this).load(R.drawable.bckgrnd).fit().centerCrop().into(imageView);
     }
 
     @Override
@@ -29,6 +34,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener{
         tvEmergencyUrgent = (TextView) findViewById(R.id.tv_emergency_urgent);
         tvFavorites = (TextView) findViewById(R.id.tv_favorites);
         tvEstimateCost = (TextView) findViewById(R.id.tv_estimate_cost);
+        imageView = (ImageView) findViewById(R.id.iv_home_background);
     }
 
     private void setListeners() {
