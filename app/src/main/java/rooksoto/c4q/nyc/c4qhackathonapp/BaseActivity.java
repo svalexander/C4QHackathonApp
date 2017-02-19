@@ -37,4 +37,5 @@ public class BaseActivity extends AppCompatActivity {
         Toast.makeText(this, "Clicked: Find Services", Toast.LENGTH_SHORT).show();
         startActivity(intent);
     }
+
 }

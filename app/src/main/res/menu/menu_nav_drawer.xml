@@ -6,29 +6,50 @@
 
     <group android:checkableBehavior="single">
         <item
+            android:id="@+id/nav_profile"
+            android:title="@string/profile"
+            />
+
+        <item
             android:id="@+id/nav_find_svc"
             android:icon="@drawable/android128"
-            android:title="Find Services"
+            android:title="@string/find_service"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <item
             android:id="@+id/nav_emrgency_urgent"
             android:icon="@drawable/android128"
-            android:title="Emergency/Urgent Care"
+            android:title="@string/emergency_urgent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <item
             android:id="@+id/nav_favorite"
             android:icon="@drawable/android128"
-            android:title="Favorites"
+            android:title="@string/my_favs"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <item
             android:id="@+id/nav_estimated_cost"
             android:icon="@drawable/android128"
-            android:title="Estimated Cost"
+            android:title="@string/estimated_cost"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
+
+        <item
+            android:id="@+id/nav_free"
+            android:title="@string/free_resources"/>
+
+        <item
+            android:id="@+id/nav_planned_parent"
+            android:title="@string/planned_parenthood"/>
+
+        <item
+            android:id="@+id/nav_medicaid"
+            android:title="@string/medicaid_medicare"/>
+
+        <item
+            android:id="@+id/nav_near"
+            android:title="@string/near_me"/>
     </group>
 </menu>

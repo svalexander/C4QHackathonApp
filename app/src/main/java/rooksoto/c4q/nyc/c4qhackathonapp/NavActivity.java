@@ -52,7 +52,10 @@ public class NavActivity extends BaseActivity implements NavigationView.OnNaviga
         super.loadFindServices();
     }
 
-    
+    @Override
+    void loadProfile() {
+        super.loadProfile();
+    }
 
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
