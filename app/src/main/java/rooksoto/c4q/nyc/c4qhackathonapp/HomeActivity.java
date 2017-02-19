@@ -8,7 +8,6 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener{
 
     TextView tvFindServices;
     TextView tvEmergencyUrgent;
-    TextView tvFreeResources;
     TextView tvFavorites;
     TextView tvEstimateCost;
 
@@ -35,7 +34,6 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener{
     private void setListeners() {
         tvFindServices.setOnClickListener(this);
         tvEmergencyUrgent.setOnClickListener(this);
-        tvFreeResources.setOnClickListener(this);
         tvFavorites.setOnClickListener(this);
         tvEstimateCost.setOnClickListener(this);
     }

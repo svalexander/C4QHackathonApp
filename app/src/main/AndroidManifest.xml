@@ -20,12 +20,13 @@
         <activity android:name=".BaseActivity" />
         <activity android:name=".NavActivity" />
         <activity android:name=".SplashActivity" />
+        <activity android:name=".MapsActivity" />
+        <activity android:name=".TabActivity" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBydhgAAVv-c7IshW-kzBfPhrEPRtvL-e8" />
 
-        <activity android:name=".MapsActivity"></activity>
     </application>
 
 </manifest>
