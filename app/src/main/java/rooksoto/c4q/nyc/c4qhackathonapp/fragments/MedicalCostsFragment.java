@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import rooksoto.c4q.nyc.c4qhackathonapp.R;
+    import rooksoto.c4q.nyc.c4qhackathonapp.R;
 
 /**
  * Created by rook on 2/18/17.

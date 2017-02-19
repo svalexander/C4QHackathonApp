@@ -31,6 +31,4 @@ public class EmergencyRoomFragment extends Fragment {
         page = getArguments().getInt(INT_TAG, 0);
         title = getArguments().getString(TITLE_TAG);
     }
-
-
 }
