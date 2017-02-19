@@ -51,11 +51,11 @@
     <string name="pap">Pap Smear</string>
     <string name="birth_control">Birth Control</string>
     <string name="pediatrician">Pediatrician</string>
-    <string name="std">STD Testing</string>
+    <string name="sti">STI Testing</string>
     <string name="planned_parenthood">Planned Parenthood</string>
     <string name="search">Search</string>
     <string name="profile">My Profile</string>
-    <string name="medicaid_medicare">Medicaid/Medicare Availability</string>
+    <string name="medicaid_medicare">Medicaid/Medicare Eligibility</string>
     <string name="near_me">Near Me</string>
     <string name="name">Name:</string>
     <string name="address">Address:</string>
