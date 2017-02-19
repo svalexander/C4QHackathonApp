@@ -1,4 +1,33 @@
 <resources>
+
+    <string name="nyu_clinic_address">16 East 16th Street, New York, NY 10003</string>
+    <string name="weill_cornell_address">505 East 70th Street, 1st Floor, New York, NY 10021</string>
+    <string name="mount_sinai_address">17 East 102nd Street, 7th Floor, New York, NY 10029</string>
+    <string name="st_anthonys_address">421 East 155th Street, Bronx, NY 10455</string>
+    <string name="echo_clinic_address">1894 Walton Avenue, Bronx, NY 10453</string>
+    <string name="ryan_clinic_uws">110 West 97th Street </string>
+    <string name="ryan_clinic_les">279 East 3rd Street </string>
+    <string name="ryan_clinic_hk">645 10th Ave</string>
+    <string name="callen_lorde_clinic_address">356 West 18th Street</string>
+    <string name="charles_wang_clinic_address">125 Walker Street </string>
+    <string name="health_dept_sexual_harlem">2238 5th Avenue, 1st Floor, New York, NY 10037</string>
+    <string name="health_dept_sexual_manhattanville">21 Old Broadway, 2nd Floor, New York, NY 10027</string>
+    <string name="health_dept_sexual_riverside">160 West 100th Street, New York, NY 10025</string>
+    <string name="health_dept_sexual_morrisania">1309 Fulton Avenue, 2nd Floor, Bronx, NY 10456</string>
+    <string name="health_dept_sexual_crown_heights">1218 Prospect Place, 1st Floor, Brooklyn, NY 11213</string>
+    <string name="health_dept_sexual_fort_greene">295 Flatbush Avenue Ext., 2nd Floor, Brooklyn, NY 11201</string>
+    <string name="health_dept_sexual_corona">34-33 Junction Boulevard, Jackson Heights, NY 11372</string>
+    <string name="health_dept_sexual_jamaica">90-37 Parsons Boulevard, 1st Floor, Jamaica, NY 11432</string>
+    <string name="planned_parenthood_bronx">349 E 149th St, 2nd Floor, Bronx, NY 10451</string>
+    <string name="planned_parenthood_manhattan">26 Bleecker St, New York, NY 10012</string>
+    <string name="planned_parenthood_queens">21-41 45th Rd, Long Island City, NY 11101</string>
+    <string name="planned_parenthood_brooklyn">44 Court St, Brooklyn, NY 11201</string>
+    <string name="planned_parenthood_staten_island">23 Hyatt St, Staten Island, NY 10301</string>
+    <string name="bellevue">462 1st Avenue,New York, NY 10016</string>
+    <string name="columbia">1790 Broadway, New York, NY 10019</string>
+    <string name="eastside_gynecology">144 E 44th St #225, New York, NY 10017</string>
+    <string name="parkmed_physicians">800 2nd Ave #6, New York, NY 10017</string>
+
     <string name="app_name">AccessHealth</string>
     <string name="find_service">Find a Service</string>
     <string name="emergency_urgent">Emergency Room/Urgent Care</string>
