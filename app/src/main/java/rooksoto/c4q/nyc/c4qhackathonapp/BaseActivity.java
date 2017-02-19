@@ -2,7 +2,6 @@ package rooksoto.c4q.nyc.c4qhackathonapp;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.Toast;
 
 /**
  * Created by rook on 2/18/17.
@@ -11,6 +10,7 @@ import android.widget.Toast;
 public class BaseActivity extends AppCompatActivity {
 
     public static final String BASE_PACKAGE = "rooksoto.c4q.nyc.c4qhackathonapp.fragments.";
+
     void loadEstimateCost() {
         Intent intent = new Intent(this, NavActivity.class);
         intent.putExtra("passed_fragment", BASE_PACKAGE + "EstimateCostFragment");
@@ -35,4 +35,9 @@ public class BaseActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    void loadProfile() {
+        Intent intent = new Intent(this, NavActivity.class);
+        intent.putExtra("passed_fragment", BASE_PACKAGE + "FindServicesFragment");
+        startActivity(intent);
+    }
 }
