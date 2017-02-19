@@ -59,9 +59,6 @@ public class FindServicesFragment extends Fragment implements View.OnClickListen
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 serviceSpinnerValue = servicesSpinner.getSelectedItem().toString();
-                if(serviceSpinnerValue.equals("Please choose a service")) {
-                    Toast.makeText(getActivity(), "Please choose a service", Toast.LENGTH_SHORT).show();
-                }
             }
 
             @Override
@@ -74,9 +71,6 @@ public class FindServicesFragment extends Fragment implements View.OnClickListen
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 boroughSpinnerValue = boroughSpinner.getSelectedItem().toString();
-                if(boroughSpinnerValue.equals("Please choose a location")) {
-                    Toast.makeText(getActivity(), "Please choose a location", Toast.LENGTH_SHORT).show();
-                }
             }
 
             @Override
@@ -89,7 +83,7 @@ public class FindServicesFragment extends Fragment implements View.OnClickListen
         return view;
     }
 
-    
+
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -105,9 +99,16 @@ public class FindServicesFragment extends Fragment implements View.OnClickListen
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.search_btn:
+                if(serviceSpinnerValue.equals("Please choose a service")) {
+                    Toast.makeText(getActivity(), "Please choose a service", Toast.LENGTH_SHORT).show();
+                }  if(boroughSpinnerValue.equals("Please choose a location")) {
+                Toast.makeText(getActivity(), "Please choose a location", Toast.LENGTH_SHORT).show();
+            } else {
                 txTest.setText(serviceSpinnerValue + boroughSpinnerValue);
+            }
 
         }
     }
+
 }
 

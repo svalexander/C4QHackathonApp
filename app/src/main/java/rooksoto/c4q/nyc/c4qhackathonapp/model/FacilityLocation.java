@@ -6,7 +6,7 @@ import android.support.annotation.StringRes;
  * Created by akashaarcher on 2/18/17.
  */
 
-public class UrgentCareLocation {
+public class FacilityLocation {
 
     private String name;
     private String borough;
@@ -14,7 +14,7 @@ public class UrgentCareLocation {
     private String phone;
 
 
-    public UrgentCareLocation(String name, String borough, @StringRes Integer address, String phone) {
+    public FacilityLocation(String name, String borough, @StringRes Integer address, String phone) {
         this.name = name;
         this.borough = borough;
         this.address = address;
