@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="find_service">Encontrar un Servicio</string>
     <string name="emergency_urgent">Sala de Emergencias/Clínica de Urgencias</string>
     <string name="free_resources">Recursos Libres</string>
