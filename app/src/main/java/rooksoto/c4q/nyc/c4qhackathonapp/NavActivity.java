@@ -1,19 +1,48 @@
 package rooksoto.c4q.nyc.c4qhackathonapp;
 
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.MenuItem;
+
+import rooksoto.c4q.nyc.c4qhackathonapp.fragments.EmergencyRoomFragment;
+import rooksoto.c4q.nyc.c4qhackathonapp.fragments.EstimateCostFragment;
+import rooksoto.c4q.nyc.c4qhackathonapp.fragments.FavoritesFragment;
+import rooksoto.c4q.nyc.c4qhackathonapp.fragments.FindServicesFragment;
+import rooksoto.c4q.nyc.c4qhackathonapp.fragments.FreeResourcesFragment;
+import rooksoto.c4q.nyc.c4qhackathonapp.fragments.MedicaidMedicareFragment;
+import rooksoto.c4q.nyc.c4qhackathonapp.fragments.NearMeFragment;
+import rooksoto.c4q.nyc.c4qhackathonapp.fragments.PlannedParenthoodFragment;
+import rooksoto.c4q.nyc.c4qhackathonapp.fragments.ProfileFragment;
 
 /**
  * Created by rook on 2/18/17.
  */
 
-public class NavActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener{
+public class NavActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener {
+
+    ProfileFragment profileFragment = new ProfileFragment();
+    FindServicesFragment findServicesFragment = new FindServicesFragment();
+    EmergencyRoomFragment erFragment = new EmergencyRoomFragment();
+    FavoritesFragment favsFragment = new FavoritesFragment();
+    EstimateCostFragment estimateCostFragment = new EstimateCostFragment();
+    FreeResourcesFragment freeResourcesFragment = new FreeResourcesFragment();
+    PlannedParenthoodFragment plannedParenthoodFragment = new PlannedParenthoodFragment();
+    MedicaidMedicareFragment medicaidMedicareFragment = new MedicaidMedicareFragment();
+    NearMeFragment nearMeFragment = new NearMeFragment();
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nav);
 
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+         navigationView.setNavigationItemSelectedListener(this);
         try {
             loadFragment();
         } catch (ClassNotFoundException e) {
@@ -28,8 +57,8 @@ public class NavActivity extends BaseActivity implements NavigationView.OnNaviga
 
     private void loadFragment() throws ClassNotFoundException, IllegalAccessException, InstantiationException {
         String fragmentName = getIntent().getExtras().getString("passed_fragment");
-        android.app.Fragment fragment = (android.app.Fragment) Class.forName(fragmentName).newInstance();
-        getFragmentManager().beginTransaction().replace(R.id.fl_fragment_host, fragment).commit();
+        Fragment fragment = (Fragment) Class.forName(fragmentName).newInstance();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fl_fragment_host, fragment).commit();
     }
 
     @Override
@@ -61,6 +90,52 @@ public class NavActivity extends BaseActivity implements NavigationView.OnNaviga
     public boolean onNavigationItemSelected(MenuItem item) {
 
         switch (item.getItemId()) {
+
+            case R.id.nav_profile:
+                FragmentTransaction profileFragTransaction = getSupportFragmentManager().beginTransaction();
+                profileFragTransaction.replace(R.id.fl_fragment_host, profileFragment);
+                profileFragTransaction.commit();
+                break;
+            case R.id.nav_find_svc:
+                FragmentTransaction serviceFragTransaction = getSupportFragmentManager().beginTransaction();
+                serviceFragTransaction.replace(R.id.fl_fragment_host, findServicesFragment);
+                serviceFragTransaction.commit();
+                break;
+            case R.id.nav_emrgency_urgent:
+                Intent intent = new Intent(this, TabActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.nav_favorite:
+                FragmentTransaction favFragTransaction = getSupportFragmentManager().beginTransaction();
+                favFragTransaction.replace(R.id.fl_fragment_host, favsFragment);
+                favFragTransaction.commit();
+                break;
+            case R.id.nav_estimated_cost:
+                FragmentTransaction estimatedFragTransaction = getSupportFragmentManager().beginTransaction();
+                estimatedFragTransaction.replace(R.id.fl_fragment_host, estimateCostFragment);
+                estimatedFragTransaction.commit();
+                break;
+            case R.id.nav_free:
+                FragmentTransaction freeFragTransaction = getSupportFragmentManager().beginTransaction();
+                freeFragTransaction.replace(R.id.fl_fragment_host, freeResourcesFragment);
+                freeFragTransaction.commit();
+                break;
+            case R.id.nav_planned_parent:
+                FragmentTransaction ppTransaction = getSupportFragmentManager().beginTransaction();
+                ppTransaction.replace(R.id.fl_fragment_host, plannedParenthoodFragment);
+                ppTransaction.commit();
+                break;
+            case R.id.nav_medicaid:
+                FragmentTransaction medFragTransaction = getSupportFragmentManager().beginTransaction();
+                medFragTransaction.replace(R.id.fl_fragment_host, medicaidMedicareFragment);
+                medFragTransaction.commit();
+                break;
+            case R.id.nav_near:
+                FragmentTransaction nearMeFragTransaction = getSupportFragmentManager().beginTransaction();
+                nearMeFragTransaction.replace(R.id.fl_fragment_host, nearMeFragment);
+                nearMeFragTransaction.commit();
+                break;
+
 
         }
         return true;
