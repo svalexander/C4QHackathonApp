@@ -20,7 +20,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         initViews();
-        Picasso.with(this).load(R.drawable.stocksnap).fit().centerCrop().into(imageView);
+        Picasso.with(this).load(R.drawable.bckgrnd).fit().centerCrop().into(imageView);
     }
 
     @Override
