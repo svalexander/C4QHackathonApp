@@ -248,6 +248,9 @@
     <string name="spanish">Español</string>
     <string name="pref_language">Preferred Language:</string>
     <string name="estimated_cost">Estimated Cost</string>
+    <string name="estimated_costs">Estimated Costs</string>
+    <string name="please_select_a_service">Please Select a Service:</string>
+    <string name="based_on_your_hhc_fee_level_the_cost_of_this_service_will_be">Based on your HHC fee level, the cost of this service will be:</string>
 
     <string-array name="language_array">
         <item>English</item>
