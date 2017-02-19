@@ -1,4 +1,4 @@
-package rooksoto.c4q.nyc.c4qhackathonapp;
+package rooksoto.c4q.nyc.c4qhackathonapp.viewholders;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -6,13 +6,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import rooksoto.c4q.nyc.c4qhackathonapp.R;
 import rooksoto.c4q.nyc.c4qhackathonapp.model.FacilityLocation;
 
 /**
  * Created by akashaarcher on 2/18/17.
  */
 
-public class UrgentCareViewHolder extends RecyclerView.ViewHolder {
+public class FacilityLocationViewHolder extends RecyclerView.ViewHolder {
 
     private View view;
     private TextView tvFacilityName;
@@ -21,15 +22,15 @@ public class UrgentCareViewHolder extends RecyclerView.ViewHolder {
     private TextView tvPhone;
 
 
-
-    public UrgentCareViewHolder(View itemView) {
-        super(itemView);
+    public FacilityLocationViewHolder(ViewGroup parent) {
+        super(inflateView(parent));
         view = itemView;
         tvFacilityName = (TextView) view.findViewById(R.id.urg_facility_name);
         tvBorough = (TextView) view.findViewById(R.id.urg_borough);
         tvAddress = (TextView) view.findViewById(R.id.urg_address);
         tvPhone = (TextView) view.findViewById(R.id.urg_phone);
     }
+
 
     private static View inflateView(ViewGroup parent) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
@@ -43,4 +44,5 @@ public class UrgentCareViewHolder extends RecyclerView.ViewHolder {
         tvAddress.setText(location.getAddress());
         tvPhone.setText(location.getPhone());
     }
+
 }
