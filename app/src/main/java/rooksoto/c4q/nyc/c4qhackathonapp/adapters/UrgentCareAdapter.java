@@ -1,0 +1,57 @@
+package rooksoto.c4q.nyc.c4qhackathonapp.adapters;
+
+import android.support.v7.widget.RecyclerView;
+import android.view.ViewGroup;
+
+import java.util.Arrays;
+import java.util.List;
+
+import rooksoto.c4q.nyc.c4qhackathonapp.R;
+import rooksoto.c4q.nyc.c4qhackathonapp.UrgentCareViewHolder;
+import rooksoto.c4q.nyc.c4qhackathonapp.model.UrgentCareLocation;
+
+/**
+ * Created by akashaarcher on 2/18/17.
+ */
+
+public class UrgentCareAdapter extends RecyclerView.Adapter {
+
+    private List<UrgentCareLocation> urgLocations = Arrays.asList(
+            new UrgentCareLocation("NYU Free Clinic", "Manhattan", R.string.nyu_clinic_address, "917.544.0735"),
+            new UrgentCareLocation("Weill Cornell", "Manhattan", R.string.weill_cornell_address, "646.962.9222"),
+            new UrgentCareLocation("Mount Sinai Hospital: East Harlem Outreach", "Manhattan", R.string.mount_sinai_address, "626.942.6519"),
+            new UrgentCareLocation("Weill Cornell", "Manhattan", R.string.weill_cornell_address, "212.999-9999"),
+            new UrgentCareLocation("St. Anthony's Free Clinic", "Bronx", R.string.st_anthonys_address, "718.401.9705"),
+            new UrgentCareLocation("Einstein Community Health Outreach", "Bronx", R.string.echo_clinic_address, "800.836.1316"),
+            new UrgentCareLocation("The Ryan Center: UWS", "Manhattan", R.string.ryan_clinic_uws, "212-749-1820"),
+            new UrgentCareLocation("The Ryan Center: LES", "Manhattan", R.string.ryan_clinic_les, "212-477-8500"),
+            new UrgentCareLocation("The Ryan Center: Hell's Kitchen", "Manhattan", R.string.ryan_clinic_hk, "212-265-4500"),
+            new UrgentCareLocation("Callen-Lorde Community Health Center", "Manhattan", R.string.callen_lorde_clinic_address, "212-271-7200"),
+            new UrgentCareLocation("Charles B. Wang Community Health Center", "Manhattan", R.string.charles_wang_clinic_address_chtwn, "(212) 379-6998"),
+            new UrgentCareLocation("Charles B. Wang Community Health Center", "Manhattan", R.string.charles_wang_clinic_address_flushing, "(718) 886-1200")
+
+    );
+
+
+    @Override
+    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        return new UrgentCareViewHolder(parent);
+
+
+    }
+
+    @Override
+    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+        UrgentCareViewHolder viewHolder = (UrgentCareViewHolder) holder;
+        UrgentCareLocation urgentCareLocationList = urgLocations.get(position);
+        viewHolder.bind(urgentCareLocationList);
+    }
+
+
+    @Override
+    public int getItemCount() {
+        return urgLocations.size();
+    }
+
+
+}

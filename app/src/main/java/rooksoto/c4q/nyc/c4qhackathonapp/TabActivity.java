@@ -6,6 +6,8 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 
+import rooksoto.c4q.nyc.c4qhackathonapp.adapters.ViewPagerAdapter;
+
 /**
  * Created by akashaarcher on 2/18/17.
  */
