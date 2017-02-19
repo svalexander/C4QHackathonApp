@@ -9,7 +9,8 @@
     <string name="ryan_clinic_les">279 East 3rd Street </string>
     <string name="ryan_clinic_hk">645 10th Ave</string>
     <string name="callen_lorde_clinic_address">356 West 18th Street</string>
-    <string name="charles_wang_clinic_address">125 Walker Street </string>
+    <string name="charles_wang_clinic_address_chtwn">268 Canal Street, New York, NY 10013  </string>
+    <string name="charles_wang_clinic_address_flushing">136-26 37th Avenue 3rd Floor, Flushing, NY 11354  </string>
 
     <string name="app_name">AccessHealth</string>
     <string name="find_service">Find a Service</string>
@@ -101,6 +102,31 @@
     <string name="fam_five_level_seven">$104,681+</string>
     <string name="fam_six_level_seven">$119,961+</string>
     <string name="fam_seven_level_seven">$135,241+</string>
+
+    <string-array name="medical_services">
+        <item>Please choose a service</item>
+        <item>Pap Smear</item>
+        <item>Birth Control</item>
+        <item>Emergency Room</item>
+        <item>Urgent Care</item>
+        <item>Pediatrician</item>
+        <item>STD Testing</item>
+        <item>Planned Parenthood</item>
+    </string-array>
+
+    <string name="medical_spinner_prompt">Choose from List</string>
+
+    <string-array name="borough_list">
+        <item>Please choose a location</item>
+        <item>Brooklyn</item>
+        <item>Queens</item>
+        <item>Manhattan</item>
+        <item>Bronx</item>
+        <item>Staten Island</item>
+    </string-array>
+
+    <string name="borough_prompt">Pick a Borough</string>
+
     <string name="input_name">Input Name</string>
     <string name="save">SAVE</string>
     <string name="english">English</string>

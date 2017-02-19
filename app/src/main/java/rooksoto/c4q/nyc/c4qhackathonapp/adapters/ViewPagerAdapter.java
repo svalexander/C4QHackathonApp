@@ -1,4 +1,4 @@
-package rooksoto.c4q.nyc.c4qhackathonapp;
+package rooksoto.c4q.nyc.c4qhackathonapp.adapters;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
