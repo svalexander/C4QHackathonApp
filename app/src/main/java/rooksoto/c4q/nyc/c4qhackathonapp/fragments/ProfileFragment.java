@@ -6,6 +6,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
 import rooksoto.c4q.nyc.c4qhackathonapp.R;
 
@@ -14,6 +16,8 @@ import rooksoto.c4q.nyc.c4qhackathonapp.R;
  */
 
 public class ProfileFragment extends Fragment {
+
+    private Spinner languageSpinner;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -25,6 +29,10 @@ public class ProfileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.profile_layout, container, false);
 
+        languageSpinner = (Spinner) view.findViewById(R.id.language_spinner);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getContext(), R.array.language_array, R.layout.profile_layout);
         return view;
     }
+
+
 }
