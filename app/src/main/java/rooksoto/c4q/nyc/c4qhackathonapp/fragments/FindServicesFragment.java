@@ -1,5 +1,6 @@
 package rooksoto.c4q.nyc.c4qhackathonapp.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -13,6 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import rooksoto.c4q.nyc.c4qhackathonapp.R;
+import rooksoto.c4q.nyc.c4qhackathonapp.LocationActivity;
 
 /**
  * Created by rook on 2/18/17.
@@ -28,6 +30,10 @@ public class FindServicesFragment extends Fragment implements View.OnClickListen
     private String boroughSpinnerValue = "";
 
 
+    public static String SERVICE_KEY = "Service Key";
+    public static String BOROUGH_KEY = "Borough Key";
+
+
     TextView txTest;
 
 
@@ -40,7 +46,7 @@ public class FindServicesFragment extends Fragment implements View.OnClickListen
         boroughSpinner = (Spinner) view.findViewById(R.id.borough_spinner);
         searchBtn = (Button) view.findViewById(R.id.search_btn);
 
-        txTest = (TextView) view.findViewById(R.id.spinner_output);
+     //   txTest = (TextView) view.findViewById(R.id.spinner_output);
 
 
         ArrayAdapter<CharSequence> serviceAdapter = ArrayAdapter.createFromResource(view.getContext(),
@@ -101,11 +107,16 @@ public class FindServicesFragment extends Fragment implements View.OnClickListen
             case R.id.search_btn:
                 if(serviceSpinnerValue.equals("Please choose a service")) {
                     Toast.makeText(getActivity(), "Please choose a service", Toast.LENGTH_SHORT).show();
-                }  if(boroughSpinnerValue.equals("Please choose a location")) {
-                Toast.makeText(getActivity(), "Please choose a location", Toast.LENGTH_SHORT).show();
-            } else {
-                txTest.setText(serviceSpinnerValue + boroughSpinnerValue);
-            }
+                } else  {
+                    Intent intent = new Intent(view.getContext(), LocationActivity.class);
+                    intent.putExtra(SERVICE_KEY, serviceSpinnerValue);
+                    intent.putExtra(BOROUGH_KEY, boroughSpinnerValue);
+                    startActivity(intent);
+                }
+
+
+
+
 
         }
     }

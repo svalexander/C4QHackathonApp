@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import rooksoto.c4q.nyc.c4qhackathonapp.R;
-import rooksoto.c4q.nyc.c4qhackathonapp.UrgentCareViewHolder;
+import rooksoto.c4q.nyc.c4qhackathonapp.viewholders.FacilityLocationViewHolder;
 import rooksoto.c4q.nyc.c4qhackathonapp.model.FacilityLocation;
 
 /**
@@ -20,7 +20,6 @@ public class UrgentCareAdapter extends RecyclerView.Adapter {
             new FacilityLocation("NYU Free Clinic", "Manhattan", R.string.nyu_clinic_address, "917.544.0735"),
             new FacilityLocation("Weill Cornell", "Manhattan", R.string.weill_cornell_address, "646.962.9222"),
             new FacilityLocation("Mount Sinai Hospital: East Harlem Outreach", "Manhattan", R.string.mount_sinai_address, "626.942.6519"),
-            new FacilityLocation("Weill Cornell", "Manhattan", R.string.weill_cornell_address, "212.999-9999"),
             new FacilityLocation("St. Anthony's Free Clinic", "Bronx", R.string.st_anthonys_address, "718.401.9705"),
             new FacilityLocation("Einstein Community Health Outreach", "Bronx", R.string.echo_clinic_address, "800.836.1316"),
             new FacilityLocation("The Ryan Center: UWS", "Manhattan", R.string.ryan_clinic_uws, "212-749-1820"),
@@ -34,14 +33,12 @@ public class UrgentCareAdapter extends RecyclerView.Adapter {
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return new UrgentCareViewHolder(parent);
-
-
+        return new FacilityLocationViewHolder(parent);
     }
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-        UrgentCareViewHolder viewHolder = (UrgentCareViewHolder) holder;
+        FacilityLocationViewHolder viewHolder = (FacilityLocationViewHolder) holder;
         FacilityLocation urgentCareLocationList = urgLocations.get(position);
         viewHolder.bind(urgentCareLocationList);
     }
