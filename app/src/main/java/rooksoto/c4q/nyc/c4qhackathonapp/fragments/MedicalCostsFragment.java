@@ -33,6 +33,7 @@ public class MedicalCostsFragment extends android.support.v4.app.Fragment implem
     HhcClient hhcClient;
     List<HhcData> hhcData;
     ArrayList<String> spinnerArray;
+    ArrayList<String> costArray;
 
     ArrayAdapter spinnerArrayAdapter;
 
@@ -82,10 +83,16 @@ public class MedicalCostsFragment extends android.support.v4.app.Fragment implem
 
     private void populateArray() {
         spinnerArray = new ArrayList<>();
+        costArray = new ArrayList<>();
 
         for (int i = 0; i < hhcData.size(); i++) {
             if (Integer.valueOf(hhcData.get(i).getHhcOptionsReducedFeeLevel()) == feeLevel) {
                 spinnerArray.add(hhcData.get(i).getService());
+                if (hhcData.get(i).getFee() == null || hhcData.get(i).getFee().equals("")) {
+                    costArray.add("Full Cost");
+                } else {
+                    costArray.add(hhcData.get(i).getFee());
+                }
             }
         }
 
@@ -131,11 +138,16 @@ public class MedicalCostsFragment extends android.support.v4.app.Fragment implem
     }
 
     private void getCost(int position) {
-        String cost = hhcData.get(position).getFee();
-        String formattedCost = NumberFormat.
-                getCurrencyInstance().
-                format(Long.valueOf(cost));
-        tvCostOfService.setText(formattedCost);
+        String cost = costArray.get(position);
+
+        if (cost.matches("[0-9]+")) {
+            String formattedCost = NumberFormat.
+                    getCurrencyInstance().
+                    format(Long.valueOf(cost));
+            tvCostOfService.setText(formattedCost);
+        } else {
+            tvCostOfService.setText("Ineligible");
+        }
         showCostView();
     }
 
