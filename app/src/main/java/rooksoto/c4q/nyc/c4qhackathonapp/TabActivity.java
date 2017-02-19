@@ -11,7 +11,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
 import rooksoto.c4q.nyc.c4qhackathonapp.adapters.ViewPagerAdapter;
-import rooksoto.c4q.nyc.c4qhackathonapp.fragments.EmergencyRoomFragment;
 import rooksoto.c4q.nyc.c4qhackathonapp.fragments.EstimateCostFragment;
 import rooksoto.c4q.nyc.c4qhackathonapp.fragments.FavoritesFragment;
 import rooksoto.c4q.nyc.c4qhackathonapp.fragments.FindServicesFragment;
@@ -32,7 +31,6 @@ public class TabActivity extends AppCompatActivity implements NavigationView.OnN
 
     ProfileFragment profileFragment = new ProfileFragment();
     FindServicesFragment findServicesFragment = new FindServicesFragment();
-    EmergencyRoomFragment erFragment = new EmergencyRoomFragment();
     FavoritesFragment favsFragment = new FavoritesFragment();
     EstimateCostFragment estimateCostFragment = new EstimateCostFragment();
     FreeResourcesFragment freeResourcesFragment = new FreeResourcesFragment();
