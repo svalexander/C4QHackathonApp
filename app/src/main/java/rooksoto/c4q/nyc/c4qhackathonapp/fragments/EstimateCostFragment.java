@@ -53,6 +53,9 @@ public class EstimateCostFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Fragment fragment = new MedicalCostsFragment();
+                Bundle bundle = new Bundle();
+                bundle.putInt("fee_level", feeLevel);
+                fragment.setArguments(bundle);
                 getFragmentManager().beginTransaction().replace(R.id.fl_fragment_host, fragment).commit();
             }
         });
