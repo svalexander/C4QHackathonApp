@@ -53,6 +53,11 @@ public class NavActivity extends BaseActivity implements NavigationView.OnNaviga
     }
 
     @Override
+    void loadProfile() {
+        super.loadProfile();
+    }
+
+    @Override
     public boolean onNavigationItemSelected(MenuItem item) {
 
         switch (item.getItemId()) {
