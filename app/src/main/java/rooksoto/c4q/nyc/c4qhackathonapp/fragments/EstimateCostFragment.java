@@ -12,6 +12,8 @@ import android.widget.TextView;
 
 import rooksoto.c4q.nyc.c4qhackathonapp.R;
 
+import static android.R.attr.fragment;
+
 /**
  * Created by rook on 2/18/17.
  */
