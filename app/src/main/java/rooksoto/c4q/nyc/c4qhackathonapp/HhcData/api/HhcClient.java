@@ -6,6 +6,7 @@ import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import rooksoto.c4q.nyc.c4qhackathonapp.HhcData.model.HhcData;
+import rooksoto.c4q.nyc.c4qhackathonapp.HhcData.model.HhcFacilityLocation;
 
 /**
  * Created by rook on 2/19/17.
@@ -36,4 +37,15 @@ public class HhcClient {
     public Call<List<HhcData>> getData() {
         return api.getDataSet();
     }
+
+
+    public Call<List<HhcFacilityLocation>> getHhcAcuteLocations() {
+        return api.getHhcAcuteLocations();
+    }
+
+    public Call<List<HhcFacilityLocation>> getHhcChildCareLocations() {
+        return api.getHhcChildCareLocations();
+    }
+
+
 }
