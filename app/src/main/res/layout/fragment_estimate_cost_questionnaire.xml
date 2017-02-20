@@ -27,7 +27,7 @@
                 android:textSize="@dimen/buttons_home_text_size"
                 android:textColor="@color/blue"
                 android:layout_width="0dp"
-                android:layout_weight="3"
+                android:layout_weight="4"
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"/>
 
@@ -35,7 +35,7 @@
                 android:id="@+id/spn_family_size"
                 android:layout_gravity="center"
                 android:layout_width="0dp"
-                android:layout_weight="4"
+                android:layout_weight="3"
                 android:gravity="center_horizontal"
                 android:layout_height="wrap_content"
                 android:entries="@array/family_size"
@@ -57,7 +57,7 @@
                 android:gravity="center_vertical"
                 android:layout_width="0dp"
                 android:textColor="@color/blue"
-                android:layout_weight="3"
+                android:layout_weight="4"
                 android:layout_height="match_parent" />
 
             <Spinner
@@ -68,7 +68,7 @@
                 android:textSize="@dimen/buttons_home_text_size"
                 android:gravity="center_horizontal"
                 android:layout_width="0dp"
-                android:layout_weight="4"
+                android:layout_weight="3"
                 android:layout_height="wrap_content"
                 android:entries="@array/fam_size_1"
                 android:spinnerMode="dialog"/>
@@ -90,7 +90,7 @@
                 android:textColor="@color/blue"
                 android:gravity="center_vertical"
                 android:layout_width="0dp"
-                android:layout_weight="3"
+                android:layout_weight="4"
                 android:layout_height="match_parent" />
 
             <TextView
@@ -100,7 +100,7 @@
                 android:gravity="center_horizontal|center_vertical"
                 android:textSize="@dimen/fee_level_text_size"
                 android:layout_width="0dp"
-                android:layout_weight="4"
+                android:layout_weight="3"
                 android:layout_height="match_parent" />
 
         </LinearLayout>
