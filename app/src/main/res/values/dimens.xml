@@ -10,5 +10,6 @@
     <dimen name="fifty">50dp</dimen>
     <dimen name="one_hundred">100dp</dimen>
     <dimen name="profile">125dp</dimen>
+    <dimen name="below_toolbar">24dp</dimen>
 
 </resources>
