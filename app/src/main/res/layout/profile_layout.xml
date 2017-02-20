@@ -7,10 +7,9 @@
 
     <ImageView
         android:id="@+id/profilePic"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/profile"
+        android:layout_height="@dimen/profile"
         android:layout_gravity="center_horizontal"
-        android:background="@drawable/profile_pic"
         android:layout_marginTop="@dimen/fifty"
         android:layout_marginBottom="@dimen/one_hundred"/>
 
@@ -56,6 +55,8 @@
 
     <Button
         android:id="@+id/saveBtn"
+        android:background="@color/primaryBlue"
+        android:textColor="@color/white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
