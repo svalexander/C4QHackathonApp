@@ -42,11 +42,8 @@ public class LocationActivity extends AppCompatActivity {
     private final String MANHATTAN = "Manhattan";
 
     HhcClient hhcClient;
-  //  List<HhcFacilityLocation> hhcFacilityLocations;
     private HhcAcuteAdapter hhcAdapter;
     private static final String TAG = "Locations";
-
-
 
 
 
@@ -70,8 +67,6 @@ public class LocationActivity extends AppCompatActivity {
         } else if (service.equals(PPNYC)) {
             facilityRv.setAdapter(new PlannedParenthoodAdapter());
         }
-
-        Log.d(TAG, "I'M HERE--NO RETROFIT!!! ");
 
         loadHhcAcuteLocations();
         loadHhcChildClinicLocations();
@@ -109,7 +104,6 @@ public class LocationActivity extends AppCompatActivity {
             }
         });
     }
-
 
 
     private void loadHhcChildClinicLocations() {
