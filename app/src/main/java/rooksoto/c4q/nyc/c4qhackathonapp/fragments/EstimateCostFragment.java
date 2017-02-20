@@ -2,6 +2,7 @@ package rooksoto.c4q.nyc.c4qhackathonapp.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,8 +12,6 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import rooksoto.c4q.nyc.c4qhackathonapp.R;
-
-import static android.R.attr.fragment;
 
 /**
  * Created by rook on 2/18/17.
@@ -62,6 +61,7 @@ public class EstimateCostFragment extends Fragment {
 
 
         spnFamilySize.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
@@ -72,44 +72,44 @@ public class EstimateCostFragment extends Fragment {
                         hideAll();
                         break;
                     case 1:
-                        spinnerTwoArray = ArrayAdapter.createFromResource(getActivity(), R.array.fam_size_1, android.R.layout.simple_spinner_item);
-                        spinnerTwoArray.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+                        spinnerTwoArray = ArrayAdapter.createFromResource(getActivity(), R.array.fam_size_1, R.layout.rook_spinner_item_text_centered);
+                        spinnerTwoArray.setDropDownViewResource(R.layout.rook_spinner_item_text_centered);
                         spnIncome.setAdapter(spinnerTwoArray);
                         showSetTwo();
                         break;
                     case 2:
-                        spinnerTwoArray = ArrayAdapter.createFromResource(getActivity(), R.array.fam_size_2, android.R.layout.simple_spinner_item);
-                        spinnerTwoArray.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+                        spinnerTwoArray = ArrayAdapter.createFromResource(getActivity(), R.array.fam_size_2, R.layout.rook_spinner_item_text_centered);
+                        spinnerTwoArray.setDropDownViewResource(R.layout.rook_spinner_item_text_centered);
                         spnIncome.setAdapter(spinnerTwoArray);
                         showSetTwo();
                         break;
                     case 3:
-                        spinnerTwoArray = ArrayAdapter.createFromResource(getActivity(), R.array.fam_size_3, android.R.layout.simple_spinner_item);
-                        spinnerTwoArray.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+                        spinnerTwoArray = ArrayAdapter.createFromResource(getActivity(), R.array.fam_size_3, R.layout.rook_spinner_item_text_centered);
+                        spinnerTwoArray.setDropDownViewResource(R.layout.rook_spinner_item_text_centered);
                         spnIncome.setAdapter(spinnerTwoArray);
                         showSetTwo();
                         break;
                     case 4:
-                        spinnerTwoArray = ArrayAdapter.createFromResource(getActivity(), R.array.fam_size_4, android.R.layout.simple_spinner_item);
-                        spinnerTwoArray.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+                        spinnerTwoArray = ArrayAdapter.createFromResource(getActivity(), R.array.fam_size_4, R.layout.rook_spinner_item_text_centered);
+                        spinnerTwoArray.setDropDownViewResource(R.layout.rook_spinner_item_text_centered);
                         spnIncome.setAdapter(spinnerTwoArray);
                         showSetTwo();
                         break;
                     case 5:
-                        spinnerTwoArray = ArrayAdapter.createFromResource(getActivity(), R.array.fam_size_5, android.R.layout.simple_spinner_item);
-                        spinnerTwoArray.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+                        spinnerTwoArray = ArrayAdapter.createFromResource(getActivity(), R.array.fam_size_5, R.layout.rook_spinner_item_text_centered);
+                        spinnerTwoArray.setDropDownViewResource(R.layout.rook_spinner_item_text_centered);
                         spnIncome.setAdapter(spinnerTwoArray);
                         showSetTwo();
                         break;
                     case 6:
-                        spinnerTwoArray = ArrayAdapter.createFromResource(getActivity(), R.array.fam_size_6, android.R.layout.simple_spinner_item);
-                        spinnerTwoArray.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+                        spinnerTwoArray = ArrayAdapter.createFromResource(getActivity(), R.array.fam_size_6, R.layout.rook_spinner_item_text_centered);
+                        spinnerTwoArray.setDropDownViewResource(R.layout.rook_spinner_item_text_centered);
                         spnIncome.setAdapter(spinnerTwoArray);
                         showSetTwo();
                         break;
                     case 7:
-                        spinnerTwoArray = ArrayAdapter.createFromResource(getActivity(), R.array.fam_size_7, android.R.layout.simple_spinner_item);
-                        spinnerTwoArray.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+                        spinnerTwoArray = ArrayAdapter.createFromResource(getActivity(), R.array.fam_size_7, R.layout.rook_spinner_item_text_centered);
+                        spinnerTwoArray.setDropDownViewResource(R.layout.rook_spinner_item_text_centered);
                         spnIncome.setAdapter(spinnerTwoArray);
                         showSetTwo();
                         break;
