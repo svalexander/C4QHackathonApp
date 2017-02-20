@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import rooksoto.c4q.nyc.c4qhackathonapp.NavActivity;
 import rooksoto.c4q.nyc.c4qhackathonapp.R;
+import rooksoto.c4q.nyc.c4qhackathonapp.TabActivity;
 
 /**
  * Created by rook on 2/18/17.
@@ -38,7 +39,12 @@ public class FavoritesFragment extends Fragment implements View.OnClickListener{
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_favorites,container,false);
 
-        ((NavActivity) view.getContext()).getSupportActionBar().setTitle(R.string.my_favs);
+        try {
+            ((NavActivity) view.getContext()).getSupportActionBar().setTitle(R.string.my_favs);
+            ((TabActivity) view.getContext()).getSupportActionBar().setTitle(R.string.my_favs);
+        } catch (Exception e){
+            e.printStackTrace();
+        }
 
         faveBtn1 = (ImageButton) view.findViewById(R.id.fave_btn);
         faveBtn2 = (ImageButton) view.findViewById(R.id.fave_btn2);

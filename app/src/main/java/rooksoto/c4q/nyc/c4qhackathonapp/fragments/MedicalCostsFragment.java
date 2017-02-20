@@ -22,6 +22,7 @@ import rooksoto.c4q.nyc.c4qhackathonapp.HhcData.api.HhcClient;
 import rooksoto.c4q.nyc.c4qhackathonapp.HhcData.model.HhcData;
 import rooksoto.c4q.nyc.c4qhackathonapp.NavActivity;
 import rooksoto.c4q.nyc.c4qhackathonapp.R;
+import rooksoto.c4q.nyc.c4qhackathonapp.TabActivity;
 
 /**
  * Created by rook on 2/18/17.
@@ -45,7 +46,14 @@ public class MedicalCostsFragment extends android.support.v4.app.Fragment implem
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_medical_costs, container, false);
-        ((NavActivity) view.getContext()).getSupportActionBar().setTitle(R.string.estimated_costs);
+
+        try {
+            ((NavActivity) view.getContext()).getSupportActionBar().setTitle(R.string.estimated_costs);
+            ((TabActivity) view.getContext()).getSupportActionBar().setTitle(R.string.estimated_costs);
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+
         feeLevel = getArguments().getInt("fee_level");
 
         spnSelectService = (Spinner) view.findViewById(R.id.spn_select_service);
