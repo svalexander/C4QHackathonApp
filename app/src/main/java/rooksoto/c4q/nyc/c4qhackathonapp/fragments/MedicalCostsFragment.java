@@ -99,7 +99,7 @@ public class MedicalCostsFragment extends android.support.v4.app.Fragment implem
 
         spinnerArrayAdapter = new ArrayAdapter(
                 getActivity(),
-                android.R.layout.simple_spinner_dropdown_item,
+                R.layout.rook_spinner_item_multiline,
                 spinnerArray);
         spinnerArrayAdapter.notifyDataSetChanged();
         spnSelectService.setAdapter(spinnerArrayAdapter);
