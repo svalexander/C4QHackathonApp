@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:weightSum="1">
-    <include layout="@layout/toolbar_layout"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
     <ImageView
         android:id="@+id/serviceIV"
         android:layout_gravity="top"
@@ -58,8 +59,8 @@
             android:text="@string/search"
             android:textColor="@color/white" />
     </LinearLayout>
-
-</FrameLayout>
+    </FrameLayout>
+</LinearLayout>
 
 
 

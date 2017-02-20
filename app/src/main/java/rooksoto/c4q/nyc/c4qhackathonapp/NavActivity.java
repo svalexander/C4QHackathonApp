@@ -70,7 +70,12 @@ public class NavActivity extends BaseActivity implements NavigationView.OnNaviga
         String fragmentName = getIntent().getExtras().getString("passed_fragment");
         Fragment fragment = (Fragment) Class.forName(fragmentName).newInstance();
         getSupportFragmentManager().beginTransaction().replace(R.id.fl_fragment_host, fragment).commit();
+
     }
+//    private void setToolbarName(){
+//        String toolbarname = getIntent().getExtras().getString("toolbar_title");
+//        toolbar.setTitle(toolbarname);
+//    }
 
     @Override
     void loadEstimateCost() {
