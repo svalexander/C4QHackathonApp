@@ -26,7 +26,13 @@ public class WomensHealthAdapter extends RecyclerView.Adapter {
             new FacilityLocation("Columbia University: Faculty Practice", "Manhattan", R.string.columbia, "212.305.9368"),
             new FacilityLocation("Charles B. Wang Community Health Center", "Manhattan", R.string.charles_wang_clinic_address_chtwn, "(212) 379-6998"),
             new FacilityLocation("Charles B. Wang Community Health Center", "Manhattan", R.string.charles_wang_clinic_address_flushing, "(718) 886-1200")
+
     );
+
+//    if(getFacitlytyp.equals("bldjfa")){
+//        wholocatoin.add();
+//    }
+
 
 
     @Override
