@@ -33,13 +33,13 @@
 
     <string name="app_name">AccessHealth</string>
     <string name="find_service">Find a Service</string>
-    <string name="emergency_urgent">Emergency Room/Urgent Care</string>
+    <string name="emergency_urgent">Emergency/Urgent Care</string>
     <string name="free_resources">Free Resources</string>
     <string name="go_favs">Go to Favorites</string>
     <string name="estimate_cost">Estimate Cost</string>
     <string name="emergency_room">Emergency Rooms</string>
     <string name="urgent_care">Urgent Care</string>
-    <string name="my_favs">My Favorites</string>
+    <string name="my_favs">Favorites</string>
     <string name="service_question">What kind of service are you looking for?</string>
     <string name="category">Category</string>
     <string name="borough">Borough</string>
@@ -250,12 +250,12 @@
     <string name="estimated_costs">Estimated Costs</string>
     <string name="please_select_a_service">Please Select a Service:</string>
     <string name="based_on_your_hhc_fee_level_the_cost_of_this_service_will_be">Based on your HHC fee level, the cost of this service will be:</string>
+    <string name="select_a_service_below">Select a Service Below</string>
 
     <string-array name="language_array">
         <item>English</item>
         <item>Español</item>
     </string-array>
-
 
 </resources>
 

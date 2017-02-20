@@ -9,9 +9,12 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.squareup.picasso.Picasso;
 
 import rooksoto.c4q.nyc.c4qhackathonapp.R;
 import rooksoto.c4q.nyc.c4qhackathonapp.LocationActivity;
@@ -35,7 +38,7 @@ public class FindServicesFragment extends Fragment implements View.OnClickListen
 
 
     TextView txTest;
-
+    private ImageView findServiceIV;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -45,6 +48,8 @@ public class FindServicesFragment extends Fragment implements View.OnClickListen
         servicesSpinner = (Spinner) view.findViewById(R.id.services_spinner);
         boroughSpinner = (Spinner) view.findViewById(R.id.borough_spinner);
         searchBtn = (Button) view.findViewById(R.id.search_btn);
+        findServiceIV = (ImageView) view.findViewById(R.id.serviceIV);
+        Picasso.with(view.getContext()).load(R.drawable.steth_two).fit().centerCrop().into(findServiceIV);
 
      //   txTest = (TextView) view.findViewById(R.id.spinner_output);
 
