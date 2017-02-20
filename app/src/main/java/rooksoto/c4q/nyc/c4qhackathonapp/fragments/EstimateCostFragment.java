@@ -2,7 +2,6 @@ package rooksoto.c4q.nyc.c4qhackathonapp.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import rooksoto.c4q.nyc.c4qhackathonapp.NavActivity;
 import rooksoto.c4q.nyc.c4qhackathonapp.R;
 
 /**
@@ -32,6 +32,8 @@ public class EstimateCostFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_estimate_cost_questionnaire, container, false);
+
+        ((NavActivity) view.getContext()).getSupportActionBar().setTitle(R.string.determine_eligibility);
         tvQHouseholdSize = (TextView) view.findViewById(R.id.tv_question_household_size);
         spnFamilySize = (Spinner) view.findViewById(R.id.spn_family_size);
         tvQIncome = (TextView) view.findViewById(R.id.tv_question_income);

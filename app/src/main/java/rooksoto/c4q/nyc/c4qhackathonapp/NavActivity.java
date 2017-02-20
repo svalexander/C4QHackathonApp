@@ -42,7 +42,7 @@ public class NavActivity extends BaseActivity implements NavigationView.OnNaviga
 
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
-       // setSupportActionBar(toolbar);
+        setSupportActionBar(toolbar);
         toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.drawer_open, R.string.drawer_close);
        // drawerLayout.addDrawerListener(toggle);
 
@@ -70,7 +70,12 @@ public class NavActivity extends BaseActivity implements NavigationView.OnNaviga
         String fragmentName = getIntent().getExtras().getString("passed_fragment");
         Fragment fragment = (Fragment) Class.forName(fragmentName).newInstance();
         getSupportFragmentManager().beginTransaction().replace(R.id.fl_fragment_host, fragment).commit();
+
     }
+//    private void setToolbarName(){
+//        String toolbarname = getIntent().getExtras().getString("toolbar_title");
+//        toolbar.setTitle(toolbarname);
+//    }
 
     @Override
     void loadEstimateCost() {
@@ -109,7 +114,6 @@ public class NavActivity extends BaseActivity implements NavigationView.OnNaviga
                 profileFragTransaction.commit();
                 break;
             case R.id.nav_find_svc:
-                toolbar.setTitle(R.string.find_service);
                 FragmentTransaction serviceFragTransaction = getSupportFragmentManager().beginTransaction();
                 serviceFragTransaction.replace(R.id.fl_fragment_host, findServicesFragment);
                 serviceFragTransaction.commit();
@@ -120,13 +124,11 @@ public class NavActivity extends BaseActivity implements NavigationView.OnNaviga
                 startActivity(intent);
                 break;
             case R.id.nav_favorite:
-                toolbar.setTitle(R.string.my_favs);
                 FragmentTransaction favFragTransaction = getSupportFragmentManager().beginTransaction();
                 favFragTransaction.replace(R.id.fl_fragment_host, favsFragment);
                 favFragTransaction.commit();
                 break;
             case R.id.nav_estimated_cost:
-                toolbar.setTitle(R.string.estimate_cost);
                 FragmentTransaction estimatedFragTransaction = getSupportFragmentManager().beginTransaction();
                 estimatedFragTransaction.replace(R.id.fl_fragment_host, estimateCostFragment);
                 estimatedFragTransaction.commit();

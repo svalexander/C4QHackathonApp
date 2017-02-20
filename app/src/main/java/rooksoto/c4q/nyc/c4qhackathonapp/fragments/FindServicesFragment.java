@@ -11,12 +11,12 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 
 import rooksoto.c4q.nyc.c4qhackathonapp.LocationActivity;
+import rooksoto.c4q.nyc.c4qhackathonapp.NavActivity;
 import rooksoto.c4q.nyc.c4qhackathonapp.R;
 
 /**
@@ -28,28 +28,24 @@ public class FindServicesFragment extends Fragment implements View.OnClickListen
     private Spinner servicesSpinner;
     private Spinner boroughSpinner;
     private Button searchBtn;
-
     private String serviceSpinnerValue = "";
     private String boroughSpinnerValue = "";
-
-
     public static String SERVICE_KEY = "Service Key";
     public static String BOROUGH_KEY = "Borough Key";
-
-
-    TextView txTest;
     private ImageView findServiceIV;
-   // private Toolbar toolbar;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_find_services, container, false);
 
+        ((NavActivity) view.getContext()).getSupportActionBar().setTitle(R.string.find_service);
+
         servicesSpinner = (Spinner) view.findViewById(R.id.services_spinner);
         boroughSpinner = (Spinner) view.findViewById(R.id.borough_spinner);
         searchBtn = (Button) view.findViewById(R.id.search_btn);
         findServiceIV = (ImageView) view.findViewById(R.id.serviceIV);
+
 
         Picasso.with(view.getContext()).load(R.drawable.steth_two).fit().centerCrop().into(findServiceIV);
 
