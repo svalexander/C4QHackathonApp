@@ -18,6 +18,7 @@ import com.squareup.picasso.Picasso;
 import rooksoto.c4q.nyc.c4qhackathonapp.LocationActivity;
 import rooksoto.c4q.nyc.c4qhackathonapp.NavActivity;
 import rooksoto.c4q.nyc.c4qhackathonapp.R;
+import rooksoto.c4q.nyc.c4qhackathonapp.TabActivity;
 
 /**
  * Created by rook on 2/18/17.
@@ -39,7 +40,12 @@ public class FindServicesFragment extends Fragment implements View.OnClickListen
 
         View view = inflater.inflate(R.layout.fragment_find_services, container, false);
 
-        ((NavActivity) view.getContext()).getSupportActionBar().setTitle(R.string.find_service);
+        try {
+            ((NavActivity) view.getContext()).getSupportActionBar().setTitle(R.string.find_service);
+            ((TabActivity) view.getContext()).getSupportActionBar().setTitle(R.string.find_service);
+        } catch (Exception e){
+            e.printStackTrace();
+        }
 
         servicesSpinner = (Spinner) view.findViewById(R.id.services_spinner);
         boroughSpinner = (Spinner) view.findViewById(R.id.borough_spinner);

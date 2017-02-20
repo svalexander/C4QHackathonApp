@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import rooksoto.c4q.nyc.c4qhackathonapp.NavActivity;
 import rooksoto.c4q.nyc.c4qhackathonapp.R;
+import rooksoto.c4q.nyc.c4qhackathonapp.TabActivity;
 
 /**
  * Created by rook on 2/18/17.
@@ -33,7 +34,13 @@ public class EstimateCostFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_estimate_cost_questionnaire, container, false);
 
-        ((NavActivity) view.getContext()).getSupportActionBar().setTitle(R.string.determine_eligibility);
+        try {
+            ((NavActivity) view.getContext()).getSupportActionBar().setTitle(R.string.determine_eligibility);
+            ((TabActivity) view.getContext()).getSupportActionBar().setTitle(R.string.determine_eligibility);
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+
         tvQHouseholdSize = (TextView) view.findViewById(R.id.tv_question_household_size);
         spnFamilySize = (Spinner) view.findViewById(R.id.spn_family_size);
         tvQIncome = (TextView) view.findViewById(R.id.tv_question_income);

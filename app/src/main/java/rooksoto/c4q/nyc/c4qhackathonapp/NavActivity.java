@@ -44,7 +44,6 @@ public class NavActivity extends BaseActivity implements NavigationView.OnNaviga
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.drawer_open, R.string.drawer_close);
-       // drawerLayout.addDrawerListener(toggle);
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
@@ -72,10 +71,6 @@ public class NavActivity extends BaseActivity implements NavigationView.OnNaviga
         getSupportFragmentManager().beginTransaction().replace(R.id.fl_fragment_host, fragment).commit();
 
     }
-//    private void setToolbarName(){
-//        String toolbarname = getIntent().getExtras().getString("toolbar_title");
-//        toolbar.setTitle(toolbarname);
-//    }
 
     @Override
     void loadEstimateCost() {
