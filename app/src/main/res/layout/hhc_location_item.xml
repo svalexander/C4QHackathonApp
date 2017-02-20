@@ -9,8 +9,7 @@
             android:id="@+id/divider"
             android:layout_width="385dp"
             android:layout_height="1dp"
-            android:layout_centerHorizontal="true"
-            android:background="@color/divider" />
+            android:layout_centerHorizontal="true" />
 
         <TextView
             android:id="@+id/hhc_facility_name"

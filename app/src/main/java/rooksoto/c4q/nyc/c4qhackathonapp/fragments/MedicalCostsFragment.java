@@ -1,5 +1,6 @@
 package rooksoto.c4q.nyc.c4qhackathonapp.fragments;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -146,6 +147,7 @@ public class MedicalCostsFragment extends android.support.v4.app.Fragment implem
                     format(Long.valueOf(cost));
             tvCostOfService.setText(formattedCost);
         } else {
+            tvCostOfService.setTextColor(Color.RED);
             tvCostOfService.setText("Ineligible");
         }
         showCostView();
