@@ -12,6 +12,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import rooksoto.c4q.nyc.c4qhackathonapp.NavActivity;
 import rooksoto.c4q.nyc.c4qhackathonapp.R;
 
 /**
@@ -36,6 +37,8 @@ public class FavoritesFragment extends Fragment implements View.OnClickListener{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_favorites,container,false);
+
+        ((NavActivity) view.getContext()).getSupportActionBar().setTitle(R.string.my_favs);
 
         faveBtn1 = (ImageButton) view.findViewById(R.id.fave_btn);
         faveBtn2 = (ImageButton) view.findViewById(R.id.fave_btn2);

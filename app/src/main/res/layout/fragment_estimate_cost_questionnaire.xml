@@ -5,14 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:text="@string/determine_eligibility"
-        android:textSize="30sp"
-        android:background="@color/ltprimaryBlue"
-        android:textColor="@color/colorPrimary"
-        android:gravity="center_horizontal|center_vertical"
-        android:layout_width="match_parent"
-        android:layout_height="50dp" />
 
     <LinearLayout
         android:orientation="vertical"
@@ -22,6 +14,7 @@
         android:weightSum="4">
 
         <LinearLayout
+            android:layout_marginTop="48dp"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="0dp"

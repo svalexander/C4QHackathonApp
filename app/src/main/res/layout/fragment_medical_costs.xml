@@ -5,15 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:text="@string/estimated_costs"
-        android:textSize="30sp"
-        android:background="@color/ltprimaryBlue"
-        android:textColor="@color/colorPrimary"
-        android:gravity="center_horizontal|center_vertical"
-        android:layout_width="match_parent"
-        android:layout_height="50dp" />
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
