@@ -9,7 +9,8 @@
             android:id="@+id/divider"
             android:layout_width="385dp"
             android:layout_height="1dp"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:background="@color/dividerColor" />
 
         <TextView
             android:id="@+id/hhc_facility_name"
@@ -17,26 +18,29 @@
             android:layout_height="wrap_content"
             android:paddingBottom="2dp"
             android:paddingTop="26dp"
+            android:textColor="@color/blue"
             android:text="Facility Name"
             android:textSize="20dp" />
 
-        <TextView
-            android:id="@+id/hhc_facility_type"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingBottom="2dp"
-            android:text="Facility Type"
-            android:textStyle="bold"
-            android:textSize="16dp" />
 
         <TextView
             android:id="@+id/hhc_borough"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingBottom="4dp"
+            android:textColor="@color/blue"
             android:text="Queens"
-            android:textSize="16dp"
-            android:textStyle="bold" />
+            android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/hhc_facility_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="2dp"
+        android:text="Facility Type"
+        android:textStyle="bold"
+        android:textSize="16dp" />
+
 
 
     <LinearLayout

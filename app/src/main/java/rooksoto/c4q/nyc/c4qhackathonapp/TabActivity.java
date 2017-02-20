@@ -14,10 +14,8 @@ import rooksoto.c4q.nyc.c4qhackathonapp.adapters.ViewPagerAdapter;
 import rooksoto.c4q.nyc.c4qhackathonapp.fragments.EstimateCostFragment;
 import rooksoto.c4q.nyc.c4qhackathonapp.fragments.FavoritesFragment;
 import rooksoto.c4q.nyc.c4qhackathonapp.fragments.FindServicesFragment;
-import rooksoto.c4q.nyc.c4qhackathonapp.fragments.FreeResourcesFragment;
 import rooksoto.c4q.nyc.c4qhackathonapp.fragments.MedicaidMedicareFragment;
 import rooksoto.c4q.nyc.c4qhackathonapp.fragments.NearMeFragment;
-import rooksoto.c4q.nyc.c4qhackathonapp.fragments.PlannedParenthoodFragment;
 import rooksoto.c4q.nyc.c4qhackathonapp.fragments.ProfileFragment;
 
 /**
@@ -33,8 +31,6 @@ public class TabActivity extends AppCompatActivity implements NavigationView.OnN
     FindServicesFragment findServicesFragment = new FindServicesFragment();
     FavoritesFragment favsFragment = new FavoritesFragment();
     EstimateCostFragment estimateCostFragment = new EstimateCostFragment();
-    FreeResourcesFragment freeResourcesFragment = new FreeResourcesFragment();
-    PlannedParenthoodFragment plannedParenthoodFragment = new PlannedParenthoodFragment();
     MedicaidMedicareFragment medicaidMedicareFragment = new MedicaidMedicareFragment();
     NearMeFragment nearMeFragment = new NearMeFragment();
 
@@ -85,16 +81,6 @@ public class TabActivity extends AppCompatActivity implements NavigationView.OnN
                 FragmentTransaction estimatedFragTransaction = getSupportFragmentManager().beginTransaction();
                 estimatedFragTransaction.replace(R.id.fl_fragment_host, estimateCostFragment);
                 estimatedFragTransaction.commit();
-                break;
-            case R.id.nav_free:
-                FragmentTransaction freeFragTransaction = getSupportFragmentManager().beginTransaction();
-                freeFragTransaction.replace(R.id.fl_fragment_host, freeResourcesFragment);
-                freeFragTransaction.commit();
-                break;
-            case R.id.nav_planned_parent:
-                FragmentTransaction ppTransaction = getSupportFragmentManager().beginTransaction();
-                ppTransaction.replace(R.id.fl_fragment_host, plannedParenthoodFragment);
-                ppTransaction.commit();
                 break;
             case R.id.nav_medicaid:
                 FragmentTransaction medFragTransaction = getSupportFragmentManager().beginTransaction();

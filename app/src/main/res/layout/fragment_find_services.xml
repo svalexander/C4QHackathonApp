@@ -4,7 +4,9 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:weightSum="1">
-
+    <include layout="@layout/toolbar_layout"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" />
     <ImageView
         android:id="@+id/serviceIV"
         android:layout_gravity="top"
@@ -13,6 +15,7 @@
         android:layout_height="match_parent" />
 
     <LinearLayout
+        android:layout_marginTop="@dimen/below_toolbar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center_horizontal"
@@ -26,6 +29,7 @@
             android:layout_marginBottom="60dp"
             android:layout_marginTop="25dp"
             android:gravity="center_horizontal"
+            android:textColor="@color/blue"
             android:text="@string/select_a_service_below"
             android:textSize="22dp" />
 
@@ -49,22 +53,11 @@
             android:layout_width="150dp"
             android:layout_height="60dp"
             android:layout_marginTop="60dp"
-            android:background="@color/primaryBlue"
+            android:background="@drawable/corner"
             android:gravity="center"
             android:text="@string/search"
             android:textColor="@color/white" />
     </LinearLayout>
-
-    <!--<TextView-->
-    <!--android:id="@+id/spinner_output"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_marginTop="55dp"-->
-    <!--android:gravity="center_horizontal"-->
-    <!--android:text="set text here"-->
-    <!--android:textSize="10dp"-->
-    <!--android:layout_weight="0.06" />-->
-
 
 </FrameLayout>
 

@@ -6,15 +6,16 @@ import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import rooksoto.c4q.nyc.c4qhackathonapp.fragments.EstimateCostFragment;
 import rooksoto.c4q.nyc.c4qhackathonapp.fragments.FavoritesFragment;
 import rooksoto.c4q.nyc.c4qhackathonapp.fragments.FindServicesFragment;
-import rooksoto.c4q.nyc.c4qhackathonapp.fragments.FreeResourcesFragment;
 import rooksoto.c4q.nyc.c4qhackathonapp.fragments.MedicaidMedicareFragment;
 import rooksoto.c4q.nyc.c4qhackathonapp.fragments.NearMeFragment;
-import rooksoto.c4q.nyc.c4qhackathonapp.fragments.PlannedParenthoodFragment;
 import rooksoto.c4q.nyc.c4qhackathonapp.fragments.ProfileFragment;
 
 /**
@@ -27,11 +28,11 @@ public class NavActivity extends BaseActivity implements NavigationView.OnNaviga
     FindServicesFragment findServicesFragment = new FindServicesFragment();
     FavoritesFragment favsFragment = new FavoritesFragment();
     EstimateCostFragment estimateCostFragment = new EstimateCostFragment();
-    FreeResourcesFragment freeResourcesFragment = new FreeResourcesFragment();
-    PlannedParenthoodFragment plannedParenthoodFragment = new PlannedParenthoodFragment();
     MedicaidMedicareFragment medicaidMedicareFragment = new MedicaidMedicareFragment();
     NearMeFragment nearMeFragment = new NearMeFragment();
-
+    private ActionBarDrawerToggle toggle;
+    private DrawerLayout drawerLayout;
+    private Toolbar toolbar;
 
 
     @Override
@@ -39,8 +40,14 @@ public class NavActivity extends BaseActivity implements NavigationView.OnNaviga
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nav);
 
+        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+       // setSupportActionBar(toolbar);
+        toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.drawer_open, R.string.drawer_close);
+       // drawerLayout.addDrawerListener(toggle);
+
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-         navigationView.setNavigationItemSelectedListener(this);
+        navigationView.setNavigationItemSelectedListener(this);
         try {
             loadFragment();
         } catch (ClassNotFoundException e) {
@@ -51,6 +58,12 @@ public class NavActivity extends BaseActivity implements NavigationView.OnNaviga
             e.printStackTrace();
         }
 
+    }
+
+    @Override
+    protected void onPostCreate(Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+        toggle.syncState();
     }
 
     private void loadFragment() throws ClassNotFoundException, IllegalAccessException, InstantiationException {
@@ -112,16 +125,6 @@ public class NavActivity extends BaseActivity implements NavigationView.OnNaviga
                 FragmentTransaction estimatedFragTransaction = getSupportFragmentManager().beginTransaction();
                 estimatedFragTransaction.replace(R.id.fl_fragment_host, estimateCostFragment);
                 estimatedFragTransaction.commit();
-                break;
-            case R.id.nav_free:
-                FragmentTransaction freeFragTransaction = getSupportFragmentManager().beginTransaction();
-                freeFragTransaction.replace(R.id.fl_fragment_host, freeResourcesFragment);
-                freeFragTransaction.commit();
-                break;
-            case R.id.nav_planned_parent:
-                FragmentTransaction ppTransaction = getSupportFragmentManager().beginTransaction();
-                ppTransaction.replace(R.id.fl_fragment_host, plannedParenthoodFragment);
-                ppTransaction.commit();
                 break;
             case R.id.nav_medicaid:
                 FragmentTransaction medFragTransaction = getSupportFragmentManager().beginTransaction();
