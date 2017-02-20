@@ -103,35 +103,42 @@ public class NavActivity extends BaseActivity implements NavigationView.OnNaviga
         switch (item.getItemId()) {
 
             case R.id.nav_profile:
+                toolbar.setTitle(R.string.profile);
                 FragmentTransaction profileFragTransaction = getSupportFragmentManager().beginTransaction();
                 profileFragTransaction.replace(R.id.fl_fragment_host, profileFragment);
                 profileFragTransaction.commit();
                 break;
             case R.id.nav_find_svc:
+                toolbar.setTitle(R.string.find_service);
                 FragmentTransaction serviceFragTransaction = getSupportFragmentManager().beginTransaction();
                 serviceFragTransaction.replace(R.id.fl_fragment_host, findServicesFragment);
                 serviceFragTransaction.commit();
                 break;
             case R.id.nav_emrgency_urgent:
+                toolbar.setTitle(R.string.emergency_urgent);
                 Intent intent = new Intent(this, TabActivity.class);
                 startActivity(intent);
                 break;
             case R.id.nav_favorite:
+                toolbar.setTitle(R.string.my_favs);
                 FragmentTransaction favFragTransaction = getSupportFragmentManager().beginTransaction();
                 favFragTransaction.replace(R.id.fl_fragment_host, favsFragment);
                 favFragTransaction.commit();
                 break;
             case R.id.nav_estimated_cost:
+                toolbar.setTitle(R.string.estimate_cost);
                 FragmentTransaction estimatedFragTransaction = getSupportFragmentManager().beginTransaction();
                 estimatedFragTransaction.replace(R.id.fl_fragment_host, estimateCostFragment);
                 estimatedFragTransaction.commit();
                 break;
             case R.id.nav_medicaid:
+                toolbar.setTitle(R.string.medicaid_medicare);
                 FragmentTransaction medFragTransaction = getSupportFragmentManager().beginTransaction();
                 medFragTransaction.replace(R.id.fl_fragment_host, medicaidMedicareFragment);
                 medFragTransaction.commit();
                 break;
             case R.id.nav_near:
+                toolbar.setTitle(R.string.near_me);
                 FragmentTransaction nearMeFragTransaction = getSupportFragmentManager().beginTransaction();
                 nearMeFragTransaction.replace(R.id.fl_fragment_host, nearMeFragment);
                 nearMeFragTransaction.commit();
