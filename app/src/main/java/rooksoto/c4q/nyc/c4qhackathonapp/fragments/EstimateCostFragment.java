@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
@@ -184,19 +185,27 @@ public class EstimateCostFragment extends Fragment {
     }
 
     private void showSetThree() {
+        hideSetThree();
         tvQFeeLevel.setEnabled(true);
         tvQFeeLevel.setVisibility(View.VISIBLE);
+        tvQFeeLevel.setAnimation(AnimationUtils.loadAnimation(getActivity(), android.R.anim.slide_in_left));
         tvFeeLevel.setEnabled(true);
         tvFeeLevel.setVisibility(View.VISIBLE);
+        tvFeeLevel.setAnimation(AnimationUtils.loadAnimation(getActivity(), android.R.anim.slide_in_left));
         tvCalculateFees.setEnabled(true);
         tvCalculateFees.setVisibility(View.VISIBLE);
+        tvCalculateFees.setAnimation(AnimationUtils.loadAnimation(getActivity(), android.R.anim.slide_in_left));
     }
 
     private void showSetTwo() {
+        hideAll();
         tvQIncome.setEnabled(true);
         tvQIncome.setVisibility(View.VISIBLE);
+        tvQIncome.setAnimation(AnimationUtils.loadAnimation(getActivity(), android.R.anim.slide_in_left));
         spnIncome.setEnabled(true);
         spnIncome.setVisibility(View.VISIBLE);
+        spnIncome.setAnimation(AnimationUtils.loadAnimation(getActivity(), android.R.anim.slide_in_left));
+
     }
 
     private void hideSetThree() {
