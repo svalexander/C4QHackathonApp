@@ -1,12 +1,8 @@
 package rooksoto.c4q.nyc.c4qhackathonapp.fragments;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -44,9 +40,6 @@ public class FindServicesFragment extends Fragment implements View.OnClickListen
     TextView txTest;
     private ImageView findServiceIV;
    // private Toolbar toolbar;
-   private ActionBarDrawerToggle toggle;
-    private DrawerLayout drawerLayout;
-    private Toolbar toolbar;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -57,18 +50,8 @@ public class FindServicesFragment extends Fragment implements View.OnClickListen
         boroughSpinner = (Spinner) view.findViewById(R.id.borough_spinner);
         searchBtn = (Button) view.findViewById(R.id.search_btn);
         findServiceIV = (ImageView) view.findViewById(R.id.serviceIV);
-       // toolbar = (Toolbar) view.findViewById(R.id.toolbar);
 
         Picasso.with(view.getContext()).load(R.drawable.steth_two).fit().centerCrop().into(findServiceIV);
-
-
-     //   txTest = (TextView) view.findViewById(R.id.spinner_output);
-        drawerLayout = (DrawerLayout) view.findViewById(R.id.drawer_layout);
-        toolbar = (Toolbar) view.findViewById(R.id.toolbar);
-        toolbar.setTitle(R.string.find_service);
-
-        toggle = new ActionBarDrawerToggle((Activity) view.getContext(), drawerLayout, toolbar, R.string.drawer_open, R.string.drawer_close);
- //       drawerLayout.addDrawerListener(toggle);
 
         ArrayAdapter<CharSequence> serviceAdapter = ArrayAdapter.createFromResource(view.getContext(),
                 R.array.medical_services, android.R.layout.simple_spinner_item);
@@ -115,11 +98,6 @@ public class FindServicesFragment extends Fragment implements View.OnClickListen
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
     }
-//    @Override
-//    protected void onPostCreate(Bundle savedInstanceState) {
-//        super.onPostCreate(savedInstanceState);
-//        toggle.syncState();
-//    }
 
     private void setListeners() {
         searchBtn.setOnClickListener(this);
@@ -138,11 +116,6 @@ public class FindServicesFragment extends Fragment implements View.OnClickListen
                     intent.putExtra(BOROUGH_KEY, boroughSpinnerValue);
                     startActivity(intent);
                 }
-
-
-
-
-
         }
     }
 

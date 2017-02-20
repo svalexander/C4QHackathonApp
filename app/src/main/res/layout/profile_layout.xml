@@ -10,7 +10,7 @@
         android:layout_width="@dimen/profile"
         android:layout_height="@dimen/profile"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="@dimen/fifty"
+        android:layout_marginTop="74dp"
         android:layout_marginBottom="@dimen/one_hundred"/>
 
     <EditText

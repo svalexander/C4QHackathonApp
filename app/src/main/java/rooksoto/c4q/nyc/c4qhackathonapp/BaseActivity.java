@@ -36,7 +36,7 @@ public class BaseActivity extends AppCompatActivity {
 
     void loadProfile() {
         Intent intent = new Intent(this, NavActivity.class);
-        intent.putExtra("passed_fragment", BASE_PACKAGE + "FindServicesFragment");
+        intent.putExtra("passed_fragment", BASE_PACKAGE + "ProfileFragment");
         startActivity(intent);
     }
 }
