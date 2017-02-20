@@ -6,6 +6,8 @@
     <dimen name="buttons_home_margin">4dp</dimen>
     <dimen name="buttons_home_padding">4dp</dimen>
     <dimen name="buttons_home_text_size">20sp</dimen>
+    <dimen name="heading_medium_text_size">24sp</dimen>
+    <dimen name="medium_text_tv_size">340dp</dimen>
     <dimen name="fee_level_text_size">60sp</dimen>
     <dimen name="fifty">50dp</dimen>
     <dimen name="one_hundred">100dp</dimen>
