@@ -7,7 +7,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.Spinner;
+
+import com.squareup.picasso.Picasso;
 
 import rooksoto.c4q.nyc.c4qhackathonapp.R;
 
@@ -18,6 +21,7 @@ import rooksoto.c4q.nyc.c4qhackathonapp.R;
 public class ProfileFragment extends Fragment {
 
     private Spinner languageSpinner;
+    private ImageView profileIV;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -33,8 +37,12 @@ public class ProfileFragment extends Fragment {
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getContext(), R.array.language_array,  android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         languageSpinner.setAdapter(adapter);
+
+        profileIV = (ImageView) view.findViewById(R.id.profilePic);
+        Picasso.with(view.getContext()).load(R.drawable.lily_profile_pic).into(profileIV);
         return view;
     }
+
 
 
 }

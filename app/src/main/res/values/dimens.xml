@@ -9,5 +9,6 @@
     <dimen name="fee_level_text_size">60sp</dimen>
     <dimen name="fifty">50dp</dimen>
     <dimen name="one_hundred">100dp</dimen>
+    <dimen name="profile">125dp</dimen>
 
 </resources>

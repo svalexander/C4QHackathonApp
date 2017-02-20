@@ -250,27 +250,12 @@
     <string name="estimated_costs">Estimated Costs</string>
     <string name="please_select_a_service">Please Select a Service:</string>
     <string name="based_on_your_hhc_fee_level_the_cost_of_this_service_will_be">Based on your HHC fee level, the cost of this service will be:</string>
+    <string name="select_a_service_below">Select a Service Below</string>
 
     <string-array name="language_array">
         <item>English</item>
         <item>Español</item>
     </string-array>
-
-    <string name="health_dept_sexual_harlem">2238 5th Avenue, 1st Floor, New York, NY 10037</string>
-    <string name="health_dept_sexual_manhattanville">21 Old Broadway, 2nd Floor, New York, NY 10027</string>
-    <string name="health_dept_sexual_riverside">160 West 100th Street, New York, NY 10025</string>
-    <string name="health_dept_sexual_morrisania">1309 Fulton Avenue, 2nd Floor, Bronx, NY 10456</string>
-    <string name="health_dept_sexual_crown_heights">1218 Prospect Place, 1st Floor, Brooklyn, NY 11213</string>
-    <string name="health_dept_sexual_fort_greene">295 Flatbush Avenue Ext., 2nd Floor, Brooklyn, NY 11201</string>
-    <string name="health_dept_sexual_corona">34-33 Junction Boulevard, Jackson Heights, NY 11372</string>
-    <string name="health_dept_sexual_jamaica">90-37 Parsons Boulevard, 1st Floor, Jamaica, NY 11432</string>
-    <string name="planned_parenthood_bronx">349 E 149th St, 2nd Floor, Bronx, NY 10451</string>
-    <string name="planned_parenthood_manhattan">26 Bleecker St, New York, NY 10012</string>
-    <string name="planned_parenthood_queens">21-41 45th Rd, Long Island City, NY 11101</string>
-    <string name="planned_parenthood_brooklyn">44 Court St, Brooklyn, NY 11201</string>
-    <string name="planned_parenthood_staten_island">23 Hyatt St, Staten Island, NY 10301</string>
-    <string name="bellevue">462 1st Avenue,New York, NY 10016</string>
-    <string name="columbia">1790 Broadway, New York, NY 10019</string>
 
 </resources>
 
