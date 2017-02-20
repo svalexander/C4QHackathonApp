@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
@@ -146,9 +147,12 @@ public class MedicalCostsFragment extends android.support.v4.app.Fragment implem
                     getCurrencyInstance().
                     format(Long.valueOf(cost));
             tvCostOfService.setText(formattedCost);
+            tvCostOfService.startAnimation(AnimationUtils.loadAnimation(getActivity(), android.R.anim.slide_in_left));
         } else {
             tvCostOfService.setTextColor(Color.RED);
             tvCostOfService.setText("Ineligible");
+            tvCostOfService.startAnimation(AnimationUtils.loadAnimation(getActivity(), android.R.anim.slide_in_left));
+
         }
         showCostView();
     }
