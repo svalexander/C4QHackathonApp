@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
 
     <RelativeLayout
@@ -16,8 +17,8 @@
             android:layout_height="wrap_content"
             android:paddingBottom="2dp"
             android:paddingTop="26dp"
-            android:textColor="@color/blue"
             android:text="Planned Parenthood"
+            android:textColor="@color/blue"
             android:textSize="20dp" />
 
         <TextView
@@ -26,8 +27,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/urg_facility_name"
             android:paddingBottom="3dp"
-            android:textColor="@color/blue"
             android:text="Brooklyn"
+            android:textColor="@color/blue"
             android:textSize="16dp"
             android:textStyle="bold" />
 
@@ -54,35 +55,34 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_below="@id/urg_address"
-            android:alpha="0.35"
-            android:paddingRight="20dp"
             android:background="@null"
-            android:src="@drawable/heart" />
+            android:paddingRight="20dp"
+            android:src="@drawable/heart"
+            android:tint="@color/accent" />
 
 
         <ImageButton
             android:id="@+id/share_btn"
             android:layout_width="30dp"
             android:layout_height="30dp"
+            android:layout_alignBottom="@+id/fave_btn"
             android:layout_below="@id/urg_address"
             android:layout_toLeftOf="@id/fave_btn"
-            android:alpha="0.35"
+            android:background="@null"
             android:paddingRight="12dp"
             android:src="@drawable/share_variant"
-            android:background="@null"
-            android:layout_alignBottom="@+id/fave_btn" />
+            android:tint="@color/primaryBlue" />
 
 
     </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/fave_location2"
-        android:layout_below="@id/fave_location1"
         android:layout_width="match_parent"
         android:layout_height="150dp"
+        android:layout_below="@id/fave_location1"
+        android:layout_marginBottom="16dp"
         android:paddingLeft="@dimen/activity_vertical_margin">
-
-        <!--         android:background="@color/lightBlue" -->
 
         <View
             android:id="@+id/divider2"
@@ -99,8 +99,8 @@
             android:layout_below="@id/divider2"
             android:paddingBottom="2dp"
             android:paddingTop="26dp"
-            android:textColor="@color/blue"
             android:text="Jamaica Clinic"
+            android:textColor="@color/blue"
             android:textSize="20dp" />
 
         <TextView
@@ -109,8 +109,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/urg_facility_name2"
             android:paddingBottom="3dp"
-            android:textColor="@color/blue"
             android:text="Queens"
+            android:textColor="@color/blue"
             android:textSize="16dp"
             android:textStyle="bold" />
 
@@ -137,34 +137,35 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_below="@id/urg_address2"
-            android:alpha="0.35"
-            android:paddingRight="20dp"
             android:background="@null"
-            android:src="@drawable/heart" />
+            android:paddingRight="20dp"
+            android:src="@drawable/heart"
+            android:tint="@color/accent" />
 
 
         <ImageButton
             android:id="@+id/share_btn2"
             android:layout_width="30dp"
             android:layout_height="30dp"
+            android:layout_alignBottom="@+id/fave_btn2"
             android:layout_below="@id/urg_address2"
             android:layout_toLeftOf="@id/fave_btn2"
-            android:alpha="0.35"
+            android:background="@null"
             android:paddingRight="12dp"
             android:src="@drawable/share_variant"
-            android:background="@null"
-            android:layout_alignBottom="@+id/fave_btn2" />
+            android:tint="@color/primaryBlue" />
 
     </RelativeLayout>
 
 
     <RelativeLayout
         android:id="@+id/fave_location3"
-        android:layout_below="@id/fave_location2"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:visibility="visible"
-        android:paddingLeft="@dimen/activity_vertical_margin">
+        android:layout_below="@id/fave_location2"
+        android:layout_marginBottom="16dp"
+        android:paddingLeft="@dimen/activity_vertical_margin"
+        android:visibility="visible">
 
         <View
             android:id="@+id/divider3"
@@ -181,8 +182,8 @@
             android:layout_below="@id/divider3"
             android:paddingBottom="2dp"
             android:paddingTop="26dp"
-            android:textColor="@color/blue"
             android:text="Queens Hospital Center"
+            android:textColor="@color/blue"
             android:textSize="20dp" />
 
         <TextView
@@ -219,10 +220,10 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_below="@id/urg_address3"
-            android:alpha="0.35"
-            android:paddingRight="20dp"
             android:background="@null"
-            android:src="@drawable/heart" />
+            android:paddingRight="20dp"
+            android:src="@drawable/heart"
+            android:tint="@color/accent" />
 
 
         <ImageButton
@@ -231,18 +232,26 @@
             android:layout_height="30dp"
             android:layout_below="@id/urg_address3"
             android:layout_toLeftOf="@id/fave_btn3"
-            android:alpha="0.35"
+            android:background="@null"
             android:paddingRight="12dp"
             android:src="@drawable/share_variant"
-            android:background="@null"
-            android:layout_alignBottom="@+id/fave_btn3" />
-
+            android:tint="@color/primaryBlue" />
 
     </RelativeLayout>
 
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fave_location3"
+        android:paddingLeft="16dp">
 
-
-
+        <View
+            android:id="@+id/divider4"
+            android:layout_width="385dp"
+            android:layout_height="1dp"
+            android:layout_centerHorizontal="true"
+            android:background="@color/dividerColor" />
+    </RelativeLayout>
 
 
 </RelativeLayout>
