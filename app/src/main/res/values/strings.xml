@@ -253,6 +253,7 @@
     <string name="select_a_service_below">Select a Service Below</string>
     <string name="drawer_open">drawer open</string>
     <string name="drawer_close">drawer close</string>
+    <string name="your_family_size">Your Family Size Is:</string>
 
     <string-array name="language_array">
         <item>English</item>
