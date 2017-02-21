@@ -5,10 +5,11 @@
     android:layout_height="wrap_content">
 
     <group android:checkableBehavior="single">
+
         <item
+            android:icon="@drawable/profile_pic"
             android:id="@+id/nav_profile"
-            android:title="@string/profile"
-            />
+            android:title="@string/profile" />
 
         <item
             android:id="@+id/nav_find_svc"

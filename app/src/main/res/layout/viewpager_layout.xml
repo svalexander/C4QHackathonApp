@@ -14,7 +14,7 @@
     </LinearLayout>
 
     <FrameLayout
-        android:id="@id/fl_fragment_host"
+        android:id="@+id/tab_frag_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
