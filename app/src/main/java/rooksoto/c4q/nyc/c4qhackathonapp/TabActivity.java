@@ -4,12 +4,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
@@ -25,7 +25,7 @@ import rooksoto.c4q.nyc.c4qhackathonapp.fragments.ProfileFragment;
  * Created by akashaarcher on 2/18/17.
  */
 
-public class TabActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+public class TabActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener{
 
     FragmentPagerAdapter fragmentPagerAdapter;
     TabLayout tabLayout;
@@ -63,7 +63,41 @@ public class TabActivity extends AppCompatActivity implements NavigationView.OnN
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.drawer_open, R.string.drawer_close);
+
     }
+
+    private void loadFragment() throws ClassNotFoundException, IllegalAccessException, InstantiationException {
+        String fragmentName = getIntent().getExtras().getString("passed_fragment_two");
+        Fragment fragment = (Fragment) Class.forName(fragmentName).newInstance();
+        getSupportFragmentManager().beginTransaction().replace(R.id.tab_frag_layout, fragment).commit();
+
+    }
+
+    @Override
+    void loadEstimateCost() {
+        super.loadEstimateCost();
+    }
+
+    @Override
+    void loadFavorites() {
+        super.loadFavorites();
+    }
+
+    @Override
+    void loadEmergencyUrgent() {
+        super.loadEmergencyUrgent();
+    }
+
+    @Override
+    void loadFindServices() {
+        super.loadFindServices();
+    }
+
+    @Override
+    void loadProfile() {
+        super.loadProfile();
+    }
+
 
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
@@ -78,12 +112,12 @@ public class TabActivity extends AppCompatActivity implements NavigationView.OnN
 
             case R.id.nav_profile:
                 FragmentTransaction profileFragTransaction = getSupportFragmentManager().beginTransaction();
-                profileFragTransaction.replace(R.id.fl_fragment_host, profileFragment);
+                profileFragTransaction.replace(R.id.tab_frag_layout, profileFragment);
                 profileFragTransaction.commit();
                 break;
             case R.id.nav_find_svc:
                 FragmentTransaction serviceFragTransaction = getSupportFragmentManager().beginTransaction();
-                serviceFragTransaction.replace(R.id.fl_fragment_host, findServicesFragment);
+                serviceFragTransaction.replace(R.id.tab_frag_layout, findServicesFragment);
                 serviceFragTransaction.commit();
                 break;
             case R.id.nav_emrgency_urgent:
@@ -92,22 +126,22 @@ public class TabActivity extends AppCompatActivity implements NavigationView.OnN
                 break;
             case R.id.nav_favorite:
                 FragmentTransaction favFragTransaction = getSupportFragmentManager().beginTransaction();
-                favFragTransaction.replace(R.id.fl_fragment_host, favsFragment);
+                favFragTransaction.replace(R.id.tab_frag_layout, favsFragment);
                 favFragTransaction.commit();
                 break;
             case R.id.nav_estimated_cost:
                 FragmentTransaction estimatedFragTransaction = getSupportFragmentManager().beginTransaction();
-                estimatedFragTransaction.replace(R.id.fl_fragment_host, estimateCostFragment);
+                estimatedFragTransaction.replace(R.id.tab_frag_layout, estimateCostFragment);
                 estimatedFragTransaction.commit();
                 break;
             case R.id.nav_medicaid:
                 FragmentTransaction medFragTransaction = getSupportFragmentManager().beginTransaction();
-                medFragTransaction.replace(R.id.fl_fragment_host, medicaidMedicareFragment);
+                medFragTransaction.replace(R.id.tab_frag_layout, medicaidMedicareFragment);
                 medFragTransaction.commit();
                 break;
             case R.id.nav_near:
                 FragmentTransaction nearMeFragTransaction = getSupportFragmentManager().beginTransaction();
-                nearMeFragTransaction.replace(R.id.fl_fragment_host, nearMeFragment);
+                nearMeFragTransaction.replace(R.id.tab_frag_layout, nearMeFragment);
                 nearMeFragTransaction.commit();
                 break;
 
