@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/profile"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/profile"
     android:orientation="vertical">
 
     <ImageView
@@ -10,55 +10,121 @@
         android:layout_width="@dimen/profile"
         android:layout_height="@dimen/profile"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="74dp"
-        android:layout_marginBottom="@dimen/one_hundred"/>
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="74dp" />
 
-    <EditText
-        android:id="@+id/inputName"
+    <!--<EditText-->
+        <!--android:id="@+id/inputName"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:hint="@string/input_name" />-->
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/input_name" />
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/userName"
+        <TextView
+            android:id="@+id/hiUserTV"
+            android:textSize="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Hello " />
+
+        <TextView
+            android:id="@+id/userName"
+            android:textSize="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:hint="name" />
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="name" />
+        android:gravity="center"
+        android:layout_marginBottom="2dp"
+        android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/savedFamSize"
+        <TextView
+            android:id="@+id/yourFamTV"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/your_family_size" />
+
+        <TextView
+            android:id="@+id/userFamSizeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="2dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="famSize" />
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/yourIncomeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Your Combined Income Is: "/>
+        <TextView
+            android:id="@+id/userIncomeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+<LinearLayout
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
 
     <TextView
-        android:id="@+id/savedIncome"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="income" />
+        android:id="@+id/prefBoro"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="Preferred Borough: "/>
+    <TextView
+        android:id="@+id/userBoro"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" />
+</LinearLayout>
+<LinearLayout
+    android:layout_marginBottom="@dimen/activity_vertical_margin"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
 
     <TextView
-        android:id="@+id/savedBoro"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="boro" />
-
-    <TextView
-        android:hint="@string/pref_language"
         android:id="@+id/preferedLanguage"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pref_language" />
+
     <Spinner
+        android:layout_marginTop="2dp"
+        android:layout_gravity="center"
         android:id="@+id/language_spinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+</LinearLayout>
 
     <Button
         android:id="@+id/saveBtn"
-        android:background="@color/primaryBlue"
-        android:textColor="@color/white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="@string/save" />
+        android:background="@color/primaryBlue"
+        android:text="@string/save"
+        android:textColor="@color/white" />
 </LinearLayout>
