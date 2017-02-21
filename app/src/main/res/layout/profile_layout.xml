@@ -27,19 +27,20 @@
         android:orientation="horizontal">
 
         <TextView
+            android:layout_marginTop="7dp"
             android:id="@+id/hiUserTV"
             android:textSize="30dp"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="Hello " />
 
-        <TextView
+        <EditText
             android:id="@+id/userName"
             android:textSize="30dp"
+            android:textColor="@color/blue"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:hint="name" />
-
+            android:text="Lily"/>
     </LinearLayout>
 
     <LinearLayout
@@ -53,9 +54,12 @@
             android:id="@+id/yourFamTV"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="@string/your_family_size" />
+            android:text="Your Family Size Is: " />
 
         <TextView
+            android:text="@string/three"
+            android:textColor="@color/blue"
+            android:textSize="16sp"
             android:id="@+id/userFamSizeTV"
             android:layout_width="wrap_content"
             android:layout_height="match_parent" />
@@ -76,6 +80,9 @@
             android:text="Your Combined Income Is: "/>
         <TextView
             android:id="@+id/userIncomeTV"
+            android:text="$37,061-$46,325"
+            android:textSize="16sp"
+            android:textColor="@color/blue"
             android:layout_width="wrap_content"
             android:layout_height="match_parent" />
     </LinearLayout>
@@ -93,6 +100,9 @@
         android:text="Preferred Borough: "/>
     <TextView
         android:id="@+id/userBoro"
+        android:textColor="@color/blue"
+        android:text="@string/bklyn"
+        android:textSize="16dp"
         android:layout_width="wrap_content"
         android:layout_height="match_parent" />
 </LinearLayout>
