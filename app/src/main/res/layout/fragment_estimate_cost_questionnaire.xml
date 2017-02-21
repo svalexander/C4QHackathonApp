@@ -116,7 +116,7 @@
                 android:id="@+id/tv_calculate_fees"
                 android:text="@string/view_medical_costs"
                 android:textColor="@color/white"
-                android:background="@color/primaryBlue"
+                android:background="@drawable/corner"
                 android:padding="@dimen/buttons_home_padding"
                 android:textSize="@dimen/buttons_home_text_size"
                 android:gravity="center_vertical|center_horizontal"
